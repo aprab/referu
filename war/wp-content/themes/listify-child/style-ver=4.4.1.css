@@ -1,0 +1,64 @@
+/*
+Theme Name: Listify Child
+Theme URI: http://astoundify.com/themes/listify
+Author: Astoundify
+Author URI: http://astoundify.com
+Description: Your beautiful handcrafted directory.
+Version: 1.0.0
+License: GNU General Public License
+License URI: license.txt
+Text Domain: listify-foursquare
+Domain Path: /languages/
+Tags: white, two-columns, one-column, right-sidebar, left-sidebar, responsive-layout, custom-background, custom-header, theme-options, full-width-template, featured-images, flexible-header, custom-menu, translation-ready
+Template: listify
+*/
+
+.call-to-action {
+	background-color: #fff;
+	background-image: url("../../../../wp-content/uploads/sites/39/2014/10/cta-bg.gif");
+  	background-repeat: no-repeat;
+	background-size: 1489px 151px;
+ 	background-position: bottom;
+}
+ 
+.cta-title {
+  	font-size: 26px;
+	color: #999894;
+}
+ 
+.cta-description p {
+	color: #bcbbb7;
+}
+ 
+.cta-subtext {
+	color: #999894;
+}
+
+.as-seen-on img {
+max-width: 85%;
+ }
+
+/*.page-title {
+font-size: 27px;
+padding: 4em 0;
+}*/
+
+.template-home .homepage-cover.has-map .job_listings-map {
+height: 510px;
+}
+
+.home-feature-media img {
+width: 30%;
+}
+
+.home-feature p:last-child {
+	text-align: center;
+	color: #949db2;
+}
+
+@media only screen and (min-width: 1200px) {
+.page-id-374 .page-title,
+.page-id-61 .page-title {
+	font-size: 35px;
+	padding: 6em 0
+}

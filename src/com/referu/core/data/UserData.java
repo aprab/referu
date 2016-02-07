@@ -13,10 +13,8 @@ import com.referu.core.tools.EncryptionTools;
 @PersistenceCapable
 public class UserData {
 	
-	@PrimaryKey 
-	private String _userName;
-	
-	@Persistent  
+	 
+	@PrimaryKey  
 	private String _email;
 	
 	@Persistent  
@@ -29,34 +27,28 @@ public class UserData {
 	private String _password;
 	
 	
-	public UserData(String userName,
-		String email, String password, String firstName, String lastName) 
+	public UserData(String email, String password, 
+		String firstName, String lastName) 
 			throws UnsupportedEncodingException, NoSuchAlgorithmException{
 		
-		_userName = userName;
+		
 		_email = email;
 		_firstName = firstName;
 		_lastName = lastName;
 		
 		_password = EncryptionTools.
 			getInstance().getMD5Hash(password);
-		
-		
 	}
 	
 	public String getEmail(){
 		return _email;
 	}
-	
-	public String getUserName(){
-		return _userName;
-	}
-	
+		
 	public String getFirstName(){
 		return _firstName;
 	}
 	
-	public String getLastName(){
+	public String getLastName() {
 		return _lastName;
 	}
 	

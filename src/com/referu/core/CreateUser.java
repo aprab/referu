@@ -2,10 +2,10 @@ package com.referu.core;
 
 import java.io.IOException;
 
+import javax.jdo.JDOObjectNotFoundException;
 import javax.jdo.PersistenceManager;
-import javax.servlet.http.*;
-
-import org.json.JSONObject;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import com.referu.core.data.UserData;
 import com.referu.core.tools.EncryptionTools;
@@ -19,7 +19,6 @@ public class CreateUser extends ReferUHTTPServlet {
 		
 		String password = req.getParameter("password");
 		String email = req.getParameter("email");
-		String userId = req.getParameter("userId");
 		String firstName = req.getParameter("firstName");
 		String lastName = req.getParameter("lastName");
 		
@@ -29,29 +28,31 @@ public class CreateUser extends ReferUHTTPServlet {
 		PersistenceManager pm = 
 				LocalPersistanceManager.getPersistenceManager();
 		
-		UserData previousID = (UserData) pm.getObjectById(UserData.class,"userId");
+		UserData previousID = null;
 		
-		if(previousID == null) {
+		try{
+			previousID = (UserData) pm.getObjectById(UserData.class,email);
+		} catch(JDOObjectNotFoundException ex){
 			
-			addJsonOutput("valid", false);
+			UserData ud = new UserData(email, password,firstName,lastName);
+			
+			pm.currentTransaction().begin();
+			pm.makePersistent(ud);
+			pm.currentTransaction().commit();
+			
+			UserData ud1 = (UserData) pm.getObjectById(UserData.class,email);
+			
+			addJsonOutput("valid", true);
+			addJsonOutput("userID", ud1.getEmail());
+			
 			printIterativeJsonOutput();
-				
+			
 			return;
 		}
 		
-		UserData ud = new UserData(userId, email, password,firstName,lastName);
-		
-		pm.currentTransaction().begin();
-		pm.makePersistent(ud);
-		pm.currentTransaction().commit();
-		
-		UserData ud1 = (UserData) pm.getObjectById(UserData.class,"userId");
-		
-		addJsonOutput("valid", true);
-		addJsonOutput("userID", ud1.getEmail());
-		
+		addJsonOutput("valid", false);
+		addJsonOutput("reason", "This email address is already registered.");
 		printIterativeJsonOutput();
-		
 		
 	}
 	

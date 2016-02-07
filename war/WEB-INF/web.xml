@@ -4,6 +4,15 @@ xmlns="http://java.sun.com/xml/ns/javaee"
 xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+
+	<security-constraint>
+		<web-resource-collection>
+			<url-pattern>/secret/*</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>admin</role-name>
+		</auth-constraint>
+	</security-constraint>
 	
 	<servlet>
 		<servlet-name>CreateUser</servlet-name>
@@ -15,13 +24,24 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<url-pattern>/secret/createUser</url-pattern>
 	</servlet-mapping>
 	
+	
 	<servlet>
-		<servlet-name>SignIn1</servlet-name>
+		<servlet-name>CreateListing</servlet-name>
+		<servlet-class>com.referu.core.CreateListing</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>CreateListing</servlet-name>
+		<url-pattern>/secret/createListing</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SignIn</servlet-name>
 		<servlet-class>com.referu.core.Signin</servlet-class>
 	</servlet>
 	
 	<servlet-mapping>
-		<servlet-name>SignIn1</servlet-name>
+		<servlet-name>SignIn</servlet-name>
 		<url-pattern>/core/SignIn</url-pattern>
 	</servlet-mapping>
 	

@@ -71,7 +71,7 @@ public class UserTools {
 
 		MemCache cache = MemCache.getInstance();
 
-		String email = user.getUserName();
+		String email = user.getEmail();
 
 		cache.putMemcacheForkeyandOffset(MemcacheEnum.USER_ID, 
 			email,user);

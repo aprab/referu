@@ -15,7 +15,7 @@ public class Signin extends ReferUHTTPServlet {
 			throws IOException, Exception {
 		
 		PersistenceManager pm = 
-				LocalPersistanceManager.getPersistenceManager();
+			LocalPersistanceManager.getPersistenceManager();
 		
 		String userId = req.getParameter("userId");
 		String password = req.getParameter("password");
@@ -32,6 +32,12 @@ public class Signin extends ReferUHTTPServlet {
 		
 		printIterativeJsonOutput();
 		
+	}
+	
+	public void goPost(HttpServletRequest req, HttpServletResponse resp)
+			throws IOException, Exception {
+		
+		goGet(req, resp);
 	}
 	
 	public boolean isJson(){

@@ -1,7 +1,10 @@
 package com.referu.core;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.StringWriter;
 import java.io.UnsupportedEncodingException;
+import java.net.MalformedURLException;
 import java.net.URLEncoder;
 
 import javax.servlet.ServletException;
@@ -31,6 +34,10 @@ public abstract class ReferUHTTPServlet extends HttpServlet{
 	protected transient ThreadLocal<String> perThreadEncryptedString;
 	
 	protected transient ThreadLocal<JSONObject> perThreadIterativeJsonObject;
+	
+	
+	private static final String API_KEY =
+		     "AIzaSyBz_0OoXCY1yDFJkE6tvAAxvE3_fQCoNTs";
 	
 	
 	
@@ -321,6 +328,30 @@ public abstract class ReferUHTTPServlet extends HttpServlet{
 			getThreadLocalResponse().getWriter().print(padJSONP(jsonObject.toString()));
 			return;
 		}
+	}
+	
+	public JSONObject getJSONFromHTTP(String URL) throws IOException {
+		
+		java.net.URL url = new java.net.URL(URL);
+		
+		InputStream is = url.openStream();
+		
+		try {
+			
+			java.util.Scanner s = 
+				new java.util.Scanner(is,"UTF-8").useDelimiter("\\A");
+			JSONObject jsonObject = new JSONObject(s.next());
+			
+			return jsonObject;
+			
+		} catch(JSONException ex) {
+			
+			return null;
+			
+		} finally {
+			is.close();
+		}
+		
 	}
 	
 	

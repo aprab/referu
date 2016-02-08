@@ -36,6 +36,16 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	</servlet-mapping>
 	
 	<servlet>
+		<servlet-name>GetSurroundingListings</servlet-name>
+		<servlet-class>com.referu.core.GetSurroundingListings</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>GetSurroundingListings</servlet-name>
+		<url-pattern>/core/getSurroundingListings</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
 		<servlet-name>SignIn</servlet-name>
 		<servlet-class>com.referu.core.Signin</servlet-class>
 	</servlet>

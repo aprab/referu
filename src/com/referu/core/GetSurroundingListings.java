@@ -1,13 +1,25 @@
 package com.referu.core;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.jdo.JDOObjectNotFoundException;
 import javax.jdo.PersistenceManager;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import com.google.appengine.api.datastore.DatastoreService;
+import com.google.appengine.api.datastore.DatastoreServiceFactory;
+import com.google.appengine.api.datastore.Entity;
+import com.google.appengine.api.datastore.FetchOptions;
 import com.google.appengine.api.datastore.GeoPt;
+import com.google.appengine.api.datastore.Query;
+import com.google.appengine.api.datastore.Query.Filter;
+import com.google.appengine.api.datastore.Query.GeoRegion.Circle;
+import com.google.appengine.api.datastore.Query.StContainsFilter;
 import com.referu.core.data.ListingsData;
 import com.referu.core.tools.LocalPersistanceManager;
 
@@ -17,34 +29,49 @@ public class GetSurroundingListings extends ReferUHTTPServlet {
 	public void goGet(HttpServletRequest req, HttpServletResponse resp)
 		throws IOException, Exception {
 		
-		Long key = Long.parseLong(req.getParameter("key"));
-				
-		PersistenceManager pm = 
-				LocalPersistanceManager.getPersistenceManager();
+		String key = req.getParameter("key");
+		
+		String URL = 
+				"https://maps.googleapis.com/maps/api/geocode/"
+					+ "json?address=" + key + "&key=AIzaSyBz_0OoXCY1yDFJkE6tvAAxvE3_fQCoNTs";
+		
+		JSONObject jsonObject = getJSONFromHTTP(URL);
+		
+		JSONObject location = 
+			jsonObject.getJSONArray("results").getJSONObject(0).
+			getJSONObject("geometry").getJSONObject("location");
+		
+		Double latitude = location.getDouble("lat");
+		Double longitude = location.getDouble("lng");
 		
 		try {
 		
-			ListingsData doesIdExist = 
-				(ListingsData) pm.getObjectById(ListingsData.class,key);
-			
 			GeoPt center = new GeoPt(
-				doesIdExist.getPoint().getLatitude(), 
-				doesIdExist.getPoint().getLongitude());
+				latitude.floatValue(), longitude.floatValue());
 			
-			double radius = 10;
+			Circle circle = new Circle(center, 10000);
+			Filter f = new StContainsFilter("geoPT", circle);
 			
-//			GeoR
-//			
-//			Filter f = new StContainsFilter("_geoPT", new Ci(center, radius));
+			Query q = new Query("ListingsData").setFilter(f);
 			
-//			Filter f = 
-//			Query q = new Query("Kind").setFilter(f);
-//
-//			// Testing for containment within a rectangle
-//			GeoPt southwest = ...
-//			GeoPt northeast = ...
-//			Filter f = new StContainsFilter("location", new Rectangle(southwest, northeast));
-//			Query q = new Query("Kind").setFilter(f);
+			DatastoreService datastore = 
+				DatastoreServiceFactory.getDatastoreService();
+			
+			List<Entity> results = datastore.prepare(q)
+                    .asList(FetchOptions.Builder.withDefaults());
+			
+			JSONArray returnArray = new JSONArray();
+			
+			for(Entity eachResult : results) {
+				
+				returnArray.put(eachResult.getProperties() );
+			}
+			
+			addJsonOutput("valid", true);
+			addJsonOutput("result", returnArray);
+			
+			printIterativeJsonOutput();
+			
 		
 		} catch (JDOObjectNotFoundException ex) {
 			
@@ -54,21 +81,6 @@ public class GetSurroundingListings extends ReferUHTTPServlet {
 			
 			return;
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	}
 	
 	public boolean isJson(){

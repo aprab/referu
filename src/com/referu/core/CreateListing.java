@@ -23,6 +23,11 @@ public class CreateListing extends ReferUHTTPServlet {
 		
 		String nameOfVenue = req.getParameter("name");
 		String description = req.getParameter("description");
+		String phone = req.getParameter("phone");
+		Double price = Double.parseDouble(req.getParameter("price"));
+		String url = req.getParameter("url");
+		
+				
 		
 		PersistenceManager pm = 
 				LocalPersistanceManager.getPersistenceManager();
@@ -41,7 +46,7 @@ public class CreateListing extends ReferUHTTPServlet {
 			new GeoPt(Float.parseFloat(latitude), Float.parseFloat(longitude));
 		
 		ListingsData listingData = new ListingsData(geoPT, 
-			email,nameOfVenue,description);
+			email,nameOfVenue,description,phone,url,price);
 		
 		pm.makePersistent(listingData);
 		

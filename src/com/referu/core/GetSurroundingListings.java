@@ -1,6 +1,7 @@
 package com.referu.core;
 
 import java.io.IOException;
+import java.net.URLEncoder;
 import java.util.List;
 
 import javax.jdo.JDOObjectNotFoundException;
@@ -31,9 +32,11 @@ public class GetSurroundingListings extends ReferUHTTPServlet {
 		
 		String key = req.getParameter("key");
 		
+		key = URLEncoder.encode(key);
+		
 		String URL = 
 				"https://maps.googleapis.com/maps/api/geocode/"
-					+ "json?address=" + key + "&key=AIzaSyBz_0OoXCY1yDFJkE6tvAAxvE3_fQCoNTs";
+					+ "json?address=" + key + "&key=" + API_KEY;
 		
 		JSONObject jsonObject = getJSONFromHTTP(URL);
 		

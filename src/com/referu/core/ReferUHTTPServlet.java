@@ -36,7 +36,7 @@ public abstract class ReferUHTTPServlet extends HttpServlet{
 	protected transient ThreadLocal<JSONObject> perThreadIterativeJsonObject;
 	
 	
-	private static final String API_KEY =
+	protected static final String API_KEY =
 		     "AIzaSyBz_0OoXCY1yDFJkE6tvAAxvE3_fQCoNTs";
 	
 	

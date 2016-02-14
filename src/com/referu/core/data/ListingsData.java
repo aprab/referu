@@ -7,6 +7,7 @@ import javax.jdo.annotations.PrimaryKey;
 
 import com.google.appengine.api.datastore.GeoPt;
 
+
 @PersistenceCapable
 public class ListingsData {
 	

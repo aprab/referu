@@ -296,20 +296,21 @@ public abstract class ReferUHTTPServlet extends HttpServlet{
 
 	public void printInvalidString(String reason) throws IOException{
 		
-		if(isJson()){
-			JSONObject jsonObject = new JSONObject();
-			
-			try {
-				jsonObject.put("valid", false);
-				jsonObject.put("reason", reason);
-			} catch (JSONException e) {
-				e.printStackTrace();
-			}
-			
-			getThreadLocalResponse().getWriter().print(padJSONP(jsonObject.toString()));
+		if(!isJson())
 			return;
+		
+		JSONObject jsonObject = new JSONObject();
+		
+		try {
+			jsonObject.put("valid", false);
+			jsonObject.put("reason", reason);
+		} catch (JSONException e) {
+			e.printStackTrace();
 		}
 		
+		getThreadLocalResponse().getWriter().print(padJSONP(jsonObject.toString()));
+		return;
+	
 	}
 	
 	public void printInvalidString(GenericException e) throws IOException{

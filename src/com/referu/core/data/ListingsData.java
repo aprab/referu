@@ -25,6 +25,12 @@ public class ListingsData {
 	private String _nameOfListing;
 	
 	@Persistent  
+	private Double _price;
+	
+	@Persistent  
+	private String _phone;
+	
+	@Persistent  
 	private String _description;
 	
 	

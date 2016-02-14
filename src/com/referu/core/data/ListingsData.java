@@ -27,6 +27,10 @@ public class ListingsData {
 	@Persistent  
 	private String _description;
 	
+	@Persistent  
+	private String _phone;
+	
+		
 	
 	public ListingsData(GeoPt geoPT, String email,
 			String nameOfListing, String description) {

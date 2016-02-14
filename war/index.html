@@ -8,6 +8,64 @@
 	
 
 	<title>ReferU. Great deals on Great student apartments</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+
+	<script>
+
+		var myApp = angular.module('myApp',[]);
+
+		myApp.controller('MyController', ['$scope', function($scope) {
+				
+				$scope.allLocations = [
+					{
+						"name": "Bates",
+						"url": "http://www.bates.edu/wp-content/uploads/2014/05/hathorn_bates_6637390405_f95e0a72d6_b.jpg"
+					}, {
+						"name": "Claremont",
+						"url": "http://signaturebooks.com/wp-content/uploads/2010/03/claremont.jpg.jpeg"
+					}, {
+						"name": "Georgetown",
+						"url": "https://uadmissions.georgetown.edu/sites/uadmissions/files/styles/rotator_image_overlay_unit_profile/public/aerialview.jpg"
+					}, {
+						"name": "Cornell",
+						"url": "https://fe.fs.cornell.edu/img/mainPage/ArtsQuad.jpg"
+					}, {
+						"name": "Notre Dame",
+						"url": "http://budget.nd.edu/assets/88150/original/budget.jpg"
+					}
+				];
+
+				$scope.frontPageListings = [
+
+					{
+						"price":179,
+						"description":"3 bedroom apartments",
+						"address":"Andower House, Washington DC",
+						"phone":"(905)-555-5555",
+						"url":"https://a1.muscache.com/im/pictures/d1bbf39a-373a-4c71-8139-255cba9287d4.jpg?aki_policy=x_medium"
+					}, {
+						"price":183,
+						"description":"Studio",
+						"address":"M Street Towers, Washington DC",
+						"phone":"(905)-555-5555",
+						"url":"https://a2.muscache.com/im/pictures/34979778/60543e2e_original.jpg?aki_policy=x_medium"
+					}, {
+						"price":110,
+						"description":"2 Bedroom Apartment",
+						"address":"Oakville Villas, DuPont",
+						"phone":"(289)-291-0265",
+						"url":"https://a2.muscache.com/im/pictures/42578018/642d1eab_original.jpg?aki_policy=x_medium"
+					}
+				];
+
+					
+				
+
+		}]);
+
+	</script>
+	
+	
 <link rel="alternate" type="application/rss+xml" title="Listify &raquo; Feed" href="feed/index.html" />
 <link rel="alternate" type="application/rss+xml" title="Listify &raquo; Comments Feed" href="comments/feed/index.html" />
 		
@@ -55,9 +113,9 @@
 	
 </head>
 
-<body class="home page page-id-6 page-template page-template-page-templates page-template-template-home page-template-page-templatestemplate-home-php template-home fixed-header directory-fields color-scheme-default footer- listify listify-120 wp-job-manager wp-job-manager-bookmarks wp-job-manager-wc-paid-listings wp-job-manager-tags wp-job-manager-regions wp-job-manager-reviews wp-job-manager-products wp-job-manager-claim-listing woocommerce-social-login woocommerce woocommerce-bookings jetpack ratings listify-child wp-job-manager-categories-enabled wp-job-manager-categories-only">
+<body ng-app = "myApp"  ng-controller="MyController" class="home page page-id-6 page-template page-template-page-templates page-template-template-home page-template-page-templatestemplate-home-php template-home fixed-header directory-fields color-scheme-default footer- listify listify-120 wp-job-manager wp-job-manager-bookmarks wp-job-manager-wc-paid-listings wp-job-manager-tags wp-job-manager-regions wp-job-manager-reviews wp-job-manager-products wp-job-manager-claim-listing woocommerce-social-login woocommerce woocommerce-bookings jetpack ratings listify-child wp-job-manager-categories-enabled wp-job-manager-categories-only">
 
-<div id="page" class="hfeed site">
+<div id="page" class="hfeed site" >
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="primary-header">
@@ -93,16 +151,16 @@
 						</div>					</div>
 				</div>
 
-								<div id="search-header" class="search-overlay">
+				<div id="search-header" class="search-overlay">
 					<div class="container">
 						
-<form role="search" method="get" class="search-form" action="listings/index.html">
-	<label>
-		<span class="screen-reader-text">Search for:</span>
-		<input type="search" class="search-field" placeholder="Search" value="" name="search_keywords" title="Search for:" />
-	</label>
-	<button type="submit" class="search-submit"></button>
-</form>
+						<form role="search" method="get" class="search-form" action="listings/index.html">
+							<label>
+								<span class="screen-reader-text">Search for:</span>
+								<input type="search" class="search-field" placeholder="Search" value="" name="search_keywords" title="Search for:" />
+							</label>
+							<button type="submit" class="search-submit"></button>
+						</form>
 						<a href="index.html#search-header" data-toggle="#search-header" class="ion-close search-overlay-toggle"></a>
 					</div>
 				</div>
@@ -228,15 +286,15 @@ ReferU helps you find verified student apartment listings around your university
         <div class="row">
 
             
-            <section id="image-grid-term-chandler-arizona" class="col-xs-12 col-sm-6 col-md-8 image-grid-item">
-                <div style="background-image: url('http://www.bates.edu/wp-content/uploads/2014/05/hathorn_bates_6637390405_f95e0a72d6_b.jpg');" class="col-xs-12 col-sm-6 col-md- image-grid-cover entry-cover has-image">
+            <section ng-repeat = "eachVariable in allLocations" id="image-grid-term-chandler-arizona" class="col-xs-12 col-sm-6 col-md-4 image-grid-item">
+                <div style="background-image: url('{{eachVariable.url}}');" class="col-xs-12 col-sm-6 col-md-6 image-grid-cover entry-cover has-image">
                     <a href="listing-region/chandler-arizona/index.html" class="image-grid-clickbox"></a>
-                    <a href="listing-region/chandler-arizona/index.html" class="cover-wrapper">Bates</a>
+                    <a href="listing-region/chandler-arizona/index.html" class="cover-wrapper">{{eachVariable.name}}</a>
                 </div>
             </section>
 
             
-            <section id="image-grid-term-missouri" class="col-xs-12 col-sm-6 col-md-4 image-grid-item">
+           <!--  <section id="image-grid-term-missouri" class="col-xs-12 col-sm-6 col-md-4 image-grid-item">
                 <div style="background-image: url('http://signaturebooks.com/wp-content/uploads/2010/03/claremont.jpg.jpeg');" class="col-xs-12 col-sm-6 col-md- image-grid-cover entry-cover has-image">
                     <a href="listing-region/missouri/index.html" class="image-grid-clickbox"></a>
                     <a href="listing-region/missouri/index.html" class="cover-wrapper">Claremont</a>
@@ -265,7 +323,7 @@ ReferU helps you find verified student apartment listings around your university
                     <a href="listing-region/british-columbia/index.html" class="image-grid-clickbox"></a>
                     <a href="listing-region/british-columbia/index.html" class="cover-wrapper">Notre Dame</a>
                 </div>
-            </section>
+            </section> -->
 
             
         </div>
@@ -274,29 +332,29 @@ ReferU helps you find verified student apartment listings around your university
         <ul class="job_listings">
             
                 
-<li id="job_listing-685" class="job_listing post-685 type-job_listing status-publish has-post-thumbnail hentry job_listing_region-toronto job_listing_category-barbershop job_listing_tag-accepts-credit-cards job_listing_tag-good-for-kids job_listing_tag-wheelchair-accessible job_listing_tag-wifi claimed col-xs-12 col-sm-6 col-md-4 style-grid" data-grid-columns="col-xs-12 col-sm-6 col-md-4" data-id="685" data-link="listing/555-liberty-village-toronto-ontario-canada-astoundify-barbershop/index.html" data-thumb="https://demo.astoundify.com/listify/wp-content/uploads/sites/39/job_listings/2014/11/Stocksy_txp782c31421CE000_Medium_85879-150x150.jpg" data-title="Astoundify Barbershop" data-address="555 Liberty Village, Toronto, Ontario, Canada" data-longitude="-79.42553470000001" data-latitude="43.6380835" data-color="#627e82" data-icon="ion-scissors" data-term="174" data-featured="" data-rating="4 Stars">
+<li  ng-repeat = "eachVariable in frontPageListings" id="job_listing-685" class="job_listing post-685 type-job_listing status-publish has-post-thumbnail hentry job_listing_region-toronto job_listing_category-barbershop job_listing_tag-accepts-credit-cards job_listing_tag-good-for-kids job_listing_tag-wheelchair-accessible job_listing_tag-wifi claimed col-xs-12 col-sm-6 col-md-4 style-grid" data-grid-columns="col-xs-12 col-sm-6 col-md-4" data-id="685" data-link="listing/555-liberty-village-toronto-ontario-canada-astoundify-barbershop/index.html" data-thumb="https://demo.astoundify.com/listify/wp-content/uploads/sites/39/job_listings/2014/11/Stocksy_txp782c31421CE000_Medium_85879-150x150.jpg" data-title="Astoundify Barbershop" data-address="555 Liberty Village, Toronto, Ontario, Canada" data-longitude="-79.42553470000001" data-latitude="43.6380835" data-color="#627e82" data-icon="ion-scissors" data-term="174" data-featured="" data-rating="4 Stars">
 
 	<div class="content-box">
 
 		<a href="listing/555-liberty-village-toronto-ontario-canada-astoundify-barbershop/index.html" class="job_listing-clickbox"></a>
 
-		<header style="background-image: url('https://a1.muscache.com/im/pictures/d0bbf39a-373a-4c71-8139-255cba9287d4.jpg?aki_policy=x_medium');" class="job_listing-entry-header listing-cover has-image">
+		<header style="background-image: url('{{eachVariable.url}}');" class="job_listing-entry-header listing-cover has-image">
             
 			<div class="job_listing-entry-header-wrapper cover-wrapper">
 
 				<div class="job_listing-entry-thumbnail">
-					<div style="background-image: url('https://a1.muscache.com/im/pictures/d0bbf39a-373a-4c71-8139-255cba9287d4.jpg?aki_policy=x_medium');" class="list-cover has-image"></div>
+					<div style="background-image: url('{{eachVariable.url}}');" class="list-cover has-image"></div>
 				</div>
 				<div class="job_listing-entry-meta">
 					        <h1 itemprop="name" class="job_listing-title">
-            $179       </h1>
+            ${{eachVariable.price}}       </h1>
     <a href="index.html#what-is-claimed" class="claimed-ribbon popup-trigger">
 	<span class="ion-checkmark-circled"></span>
 	<span class="tooltip">Verified Listing</span>
 </a>
 
-<div class="job_listing-location job_listing-location-formatted"><a class="google_map_link" href="http://maps.google.com/maps?saddr=Current+Location&daddr=43.6380835,-79.42553470000001" target="_blank"><span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">3 bedroom apartment<br/><span itemprop="addressLocality">Andower House,</span> <span itemprop="addressRegion">Washington DC</span> </div>        <div class="job_listing-phone">
-            <span itemprop="telephone"><a href="tel:9055555555">(905) 555-5555</a></span>
+<div class="job_listing-location job_listing-location-formatted"><a class="google_map_link" href="http://maps.google.com/maps?saddr=Current+Location&daddr=43.6380835,-79.42553470000001" target="_blank"><span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">{{eachVariable.description}}<br/><span itemprop="addressLocality">{{eachVariable.address}}</span> <span itemprop="addressRegion">Washington DC</span> </div>        <div class="job_listing-phone">
+            <span itemprop="telephone"><a href="tel:9055555555">{{eachVariable.phone}}</a></span>
         </div>
     				</div>
 
@@ -343,327 +401,7 @@ ReferU helps you find verified student apartment listings around your university
 
             
                 
-<li id="job_listing-270" class="job_listing post-270 type-job_listing status-publish has-post-thumbnail hentry job_listing_region-chandler-arizona job_listing_category-bars job_listing_category-breweries job_listing_category-restaurants job_listing_tag-accepts-credit-cards job_listing_tag-alcohol job_listing_tag-caters job_listing_tag-good-for-groups job_listing_tag-has-tv job_listing_tag-outdoor-seating job_listing_tag-parking job_listing_tag-take-out job_listing_tag-takes-reservations job_listing_tag-waiter-service job_listing_tag-wheelchair-accessible job_listing_tag-wifi not-claimed col-xs-12 col-sm-6 col-md-4 style-grid" data-grid-columns="col-xs-12 col-sm-6 col-md-4" data-id="270" data-link="listing/8-s-san-marcos-pl-chandler-az-85225-united-states/index.html" data-thumb="https://demo.astoundify.com/listify/wp-content/uploads/sites/39/2014/11/Stocksy_txpf3080aa3KME000_Medium_434948-150x150.jpg" data-title="SanTan Brewing" data-address="8 S San Marcos Pl Chandler, AZ 85225 United States" data-longitude="-111.842532" data-latitude="33.303233" data-color="#eb974e" data-icon="ion-beer" data-term="50" data-featured="" data-rating="4 Stars">
-
-	<div class="content-box">
-
-		<a href="listing/8-s-san-marcos-pl-chandler-az-85225-united-states/index.html" class="job_listing-clickbox"></a>
-
-		<header style="background-image: url('https://a2.muscache.com/im/pictures/34979778/60543e2e_original.jpg?aki_policy=x_medium');" class="job_listing-entry-header listing-cover has-image">
-            
-			<div class="job_listing-entry-header-wrapper cover-wrapper">
-
-				<div class="job_listing-entry-thumbnail">
-					<div style="background-image: url('https://a2.muscache.com/im/pictures/34979778/60543e2e_original.jpg?aki_policy=x_medium');" class="list-cover has-image"></div>
-				</div>
-				<div class="job_listing-entry-meta">
-					        <h1 itemprop="name" class="job_listing-title">
-            $183        </h1>
-    <div class="job_listing-location job_listing-location-formatted"><a class="google_map_link" href="http://maps.google.com/maps?saddr=Current+Location&daddr=33.303233,-111.842532" target="_blank"><span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="streetAddress">Studio</span><br/><span itemprop="addressLocality">M Street Towers, Washington DC</span></a></div>        <div class="job_listing-phone">
-            <span itemprop="telephone"><a href="tel:4809178700">(480) 917-8700</a></span>
-        </div>
-    				</div>
-
-			</div>
-
-            		</header><!-- .entry-header -->
-
-		<footer class="job_listing-entry-footer">
-
-					<div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating" class="rating-4 job_listing-rating-wrapper" title="4 Reviews">
-			<span class="job_listing-rating-stars">
-				
-		<span class='stars-rating'>
-			
-									<span class="dashicons dashicons-star-filled"></span>
-				
-			
-									<span class="dashicons dashicons-star-filled"></span>
-				
-			
-									<span class="dashicons dashicons-star-filled"></span>
-				
-			
-									<span class="dashicons dashicons-star-filled"></span>
-				
-			
-									<span class="dashicons dashicons-star-filled"></span>
-				
-					</span>			</span>
-
-			<span class="job_listing-rating-average">
-				<span itemprop="ratingValue">4.3</span>
-			</span>
-			<span class="job_listing-rating-count">
-				<span itemprop="reviewCount">4</span> Reviews			</span>
-		</div>
-	<div class="job-manager-form wp-job-manager-bookmarks-form">
-	<div><a class="bookmark-notice" href="my-account/index.html">Login to bookmark this Listing</a></div>
-</div>
-		</footer><!-- .entry-footer -->
-
-	</div>
-</li><!-- #post-## -->
-
-            
-                
-<li id="job_listing-264" class="job_listing post-264 type-job_listing status-publish has-post-thumbnail hentry job_listing_region-toronto job_listing_category-food job_listing_category-restaurants job_listing_tag-accepts-credit-cards job_listing_tag-delivery job_listing_tag-outdoor-seating job_listing_tag-parking job_listing_tag-take-out job_listing_tag-takes-reservations job_listing_tag-waiter-service job_listing_tag-wheelchair-accessible job_listing_tag-wifi not-claimed col-xs-12 col-sm-6 col-md-4 style-grid" data-grid-columns="col-xs-12 col-sm-6 col-md-4" data-id="264" data-link="listing/240-leighland-avenue-oakville-on-canada-oliver-bonacini-cafe-grill/index.html" data-thumb="https://demo.astoundify.com/listify/wp-content/uploads/sites/39/2014/11/oliver-and-bonacini-one-150x150.jpg" data-title="Oliver &amp; Bonacini Café Grill" data-address="240 Leighland Avenue Oakville, ON, Canada" data-longitude="-79.68714039999998" data-latitude="43.4617715" data-color="#95cb70" data-icon="ion-pizza" data-term="28" data-featured="" data-rating="4 Stars">
-
-	<div class="content-box">
-
-		<a href="listing/240-leighland-avenue-oakville-on-canada-oliver-bonacini-cafe-grill/index.html" class="job_listing-clickbox"></a>
-
-		<header style="background-image: url('https://a2.muscache.com/im/pictures/42578018/642d1eab_original.jpg?aki_policy=x_medium');" class="job_listing-entry-header listing-cover has-image">
-            
-			<div class="job_listing-entry-header-wrapper cover-wrapper">
-
-				<div class="job_listing-entry-thumbnail">
-					<div style="background-image: url('https://a2.muscache.com/im/pictures/42578018/642d1eab_original.jpg?aki_policy=x_medium"></div>
-				</div>
-				<div class="job_listing-entry-meta">
-					        <h1 itemprop="name" class="job_listing-title">
-            $110        </h1>
-    <div class="job_listing-location job_listing-location-formatted"><a class="google_map_link" href="http://maps.google.com/maps?saddr=Current+Location&daddr=43.4617715,-79.68714039999998" target="_blank"><span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="streetAddress">2 bedroom apartment</span><br/><span itemprop="addressLocality">Oakville Villas, DuPont</span> </div>        <div class="job_listing-phone">
-            <span itemprop="telephone"><a href="tel:2892910265">(289) 291-0265</a></span>
-        </div>
-    				</div>
-
-			</div>
-
-            		</header><!-- .entry-header -->
-
-		<footer class="job_listing-entry-footer">
-
-					<div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating" class="rating-4 job_listing-rating-wrapper" title="4 Reviews">
-			<span class="job_listing-rating-stars">
-				
-		<span class='stars-rating'>
-			
-									<span class="dashicons dashicons-star-filled"></span>
-				
-			
-									<span class="dashicons dashicons-star-filled"></span>
-				
-			
-									<span class="dashicons dashicons-star-filled"></span>
-				
-			
-									<span class="dashicons dashicons-star-filled"></span>
-				
-			
-									<span class="dashicons dashicons-star-filled"></span>
-				
-					</span>			</span>
-
-			<span class="job_listing-rating-average">
-				<span itemprop="ratingValue">4.8</span>
-			</span>
-			<span class="job_listing-rating-count">
-				<span itemprop="reviewCount">4</span> Reviews			</span>
-		</div>
-	<div class="job-manager-form wp-job-manager-bookmarks-form">
-	<div><a class="bookmark-notice" href="my-account/index.html">Login to bookmark this Listing</a></div>
-</div>
-		</footer><!-- .entry-footer -->
-
-	</div>
-</li><!-- #post-## -->
-
-            
- <li id="job_listing-685" class="job_listing post-685 type-job_listing status-publish has-post-thumbnail hentry job_listing_region-toronto job_listing_category-barbershop job_listing_tag-accepts-credit-cards job_listing_tag-good-for-kids job_listing_tag-wheelchair-accessible job_listing_tag-wifi claimed col-xs-12 col-sm-6 col-md-4 style-grid" data-grid-columns="col-xs-12 col-sm-6 col-md-4" data-id="685" data-link="listing/555-liberty-village-toronto-ontario-canada-astoundify-barbershop/index.html" data-thumb="https://demo.astoundify.com/listify/wp-content/uploads/sites/39/job_listings/2014/11/Stocksy_txp782c31421CE000_Medium_85879-150x150.jpg" data-title="Astoundify Barbershop" data-address="555 Liberty Village, Toronto, Ontario, Canada" data-longitude="-79.42553470000001" data-latitude="43.6380835" data-color="#627e82" data-icon="ion-scissors" data-term="174" data-featured="" data-rating="4 Stars">
-
-	<div class="content-box">
-
-		<a href="listing/555-liberty-village-toronto-ontario-canada-astoundify-barbershop/index.html" class="job_listing-clickbox"></a>
-
-		<header style="background-image: url('https://a1.muscache.com/im/pictures/d0bbf39a-373a-4c71-8139-255cba9287d4.jpg?aki_policy=x_medium');" class="job_listing-entry-header listing-cover has-image">
-            
-			<div class="job_listing-entry-header-wrapper cover-wrapper">
-
-				<div class="job_listing-entry-thumbnail">
-					<div style="background-image: url('https://a1.muscache.com/im/pictures/d0bbf39a-373a-4c71-8139-255cba9287d4.jpg?aki_policy=x_medium');" class="list-cover has-image"></div>
-				</div>
-				<div class="job_listing-entry-meta">
-					        <h1 itemprop="name" class="job_listing-title">
-            $179       </h1>
-    <a href="index.html#what-is-claimed" class="claimed-ribbon popup-trigger">
-	<span class="ion-checkmark-circled"></span>
-	<span class="tooltip">Verified Listing</span>
-</a>
-
-<div class="job_listing-location job_listing-location-formatted"><a class="google_map_link" href="http://maps.google.com/maps?saddr=Current+Location&daddr=43.6380835,-79.42553470000001" target="_blank"><span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">3 bedroom apartment<br/><span itemprop="addressLocality">Andower House,</span> <span itemprop="addressRegion">Washington DC</span> </div>        <div class="job_listing-phone">
-            <span itemprop="telephone"><a href="tel:9055555555">(905) 555-5555</a></span>
-        </div>
-    				</div>
-
-			</div>
-
-            		</header><!-- .entry-header -->
-
-		<footer class="job_listing-entry-footer">
-
-					<div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating" class="rating-4 job_listing-rating-wrapper" title="4 Reviews">
-			<span class="job_listing-rating-stars">
-				
-		<span class='stars-rating'>
-			
-									<span class="dashicons dashicons-star-filled"></span>
-				
-			
-									<span class="dashicons dashicons-star-filled"></span>
-				
-			
-									<span class="dashicons dashicons-star-filled"></span>
-				
-			
-									<span class="dashicons dashicons-star-filled"></span>
-				
-			
-									<span class="dashicons dashicons-star-filled"></span>
-				
-					</span>			</span>
-
-			<span class="job_listing-rating-average">
-				<span itemprop="ratingValue">4.8</span>
-			</span>
-			<span class="job_listing-rating-count">
-				<span itemprop="reviewCount">4</span> Reviews			</span>
-		</div>
-	<div class="job-manager-form wp-job-manager-bookmarks-form">
-	<div><a class="bookmark-notice" href="my-account/index.html">Login to bookmark this Listing</a></div>
-</div>
-		</footer><!-- .entry-footer -->
-
-	</div>
-</li><!-- #post-## -->
-
-            
-                
-<li id="job_listing-270" class="job_listing post-270 type-job_listing status-publish has-post-thumbnail hentry job_listing_region-chandler-arizona job_listing_category-bars job_listing_category-breweries job_listing_category-restaurants job_listing_tag-accepts-credit-cards job_listing_tag-alcohol job_listing_tag-caters job_listing_tag-good-for-groups job_listing_tag-has-tv job_listing_tag-outdoor-seating job_listing_tag-parking job_listing_tag-take-out job_listing_tag-takes-reservations job_listing_tag-waiter-service job_listing_tag-wheelchair-accessible job_listing_tag-wifi not-claimed col-xs-12 col-sm-6 col-md-4 style-grid" data-grid-columns="col-xs-12 col-sm-6 col-md-4" data-id="270" data-link="listing/8-s-san-marcos-pl-chandler-az-85225-united-states/index.html" data-thumb="https://demo.astoundify.com/listify/wp-content/uploads/sites/39/2014/11/Stocksy_txpf3080aa3KME000_Medium_434948-150x150.jpg" data-title="SanTan Brewing" data-address="8 S San Marcos Pl Chandler, AZ 85225 United States" data-longitude="-111.842532" data-latitude="33.303233" data-color="#eb974e" data-icon="ion-beer" data-term="50" data-featured="" data-rating="4 Stars">
-
-	<div class="content-box">
-
-		<a href="listing/8-s-san-marcos-pl-chandler-az-85225-united-states/index.html" class="job_listing-clickbox"></a>
-
-		<header style="background-image: url('https://a2.muscache.com/im/pictures/34979778/60543e2e_original.jpg?aki_policy=x_medium');" class="job_listing-entry-header listing-cover has-image">
-            
-			<div class="job_listing-entry-header-wrapper cover-wrapper">
-
-				<div class="job_listing-entry-thumbnail">
-					<div style="background-image: url('https://a2.muscache.com/im/pictures/34979778/60543e2e_original.jpg?aki_policy=x_medium');" class="list-cover has-image"></div>
-				</div>
-				<div class="job_listing-entry-meta">
-					        <h1 itemprop="name" class="job_listing-title">
-            $183        </h1>
-    <div class="job_listing-location job_listing-location-formatted"><a class="google_map_link" href="http://maps.google.com/maps?saddr=Current+Location&daddr=33.303233,-111.842532" target="_blank"><span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="streetAddress">Studio</span><br/><span itemprop="addressLocality">M Street Towers, Washington DC</span></a></div>        <div class="job_listing-phone">
-            <span itemprop="telephone"><a href="tel:4809178700">(480) 917-8700</a></span>
-        </div>
-    				</div>
-
-			</div>
-
-            		</header><!-- .entry-header -->
-
-		<footer class="job_listing-entry-footer">
-
-					<div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating" class="rating-4 job_listing-rating-wrapper" title="4 Reviews">
-			<span class="job_listing-rating-stars">
-				
-		<span class='stars-rating'>
-			
-									<span class="dashicons dashicons-star-filled"></span>
-				
-			
-									<span class="dashicons dashicons-star-filled"></span>
-				
-			
-									<span class="dashicons dashicons-star-filled"></span>
-				
-			
-									<span class="dashicons dashicons-star-filled"></span>
-				
-			
-									<span class="dashicons dashicons-star-filled"></span>
-				
-					</span>			</span>
-
-			<span class="job_listing-rating-average">
-				<span itemprop="ratingValue">4.3</span>
-			</span>
-			<span class="job_listing-rating-count">
-				<span itemprop="reviewCount">4</span> Reviews			</span>
-		</div>
-	<div class="job-manager-form wp-job-manager-bookmarks-form">
-	<div><a class="bookmark-notice" href="my-account/index.html">Login to bookmark this Listing</a></div>
-</div>
-		</footer><!-- .entry-footer -->
-
-	</div>
-</li><!-- #post-## -->
-
-            
-                
-<li id="job_listing-264" class="job_listing post-264 type-job_listing status-publish has-post-thumbnail hentry job_listing_region-toronto job_listing_category-food job_listing_category-restaurants job_listing_tag-accepts-credit-cards job_listing_tag-delivery job_listing_tag-outdoor-seating job_listing_tag-parking job_listing_tag-take-out job_listing_tag-takes-reservations job_listing_tag-waiter-service job_listing_tag-wheelchair-accessible job_listing_tag-wifi not-claimed col-xs-12 col-sm-6 col-md-4 style-grid" data-grid-columns="col-xs-12 col-sm-6 col-md-4" data-id="264" data-link="listing/240-leighland-avenue-oakville-on-canada-oliver-bonacini-cafe-grill/index.html" data-thumb="https://demo.astoundify.com/listify/wp-content/uploads/sites/39/2014/11/oliver-and-bonacini-one-150x150.jpg" data-title="Oliver &amp; Bonacini Café Grill" data-address="240 Leighland Avenue Oakville, ON, Canada" data-longitude="-79.68714039999998" data-latitude="43.4617715" data-color="#95cb70" data-icon="ion-pizza" data-term="28" data-featured="" data-rating="4 Stars">
-
-	<div class="content-box">
-
-		<a href="listing/240-leighland-avenue-oakville-on-canada-oliver-bonacini-cafe-grill/index.html" class="job_listing-clickbox"></a>
-
-		<header style="background-image: url('https://a2.muscache.com/im/pictures/42578018/642d1eab_original.jpg?aki_policy=x_medium');" class="job_listing-entry-header listing-cover has-image">
-            
-			<div class="job_listing-entry-header-wrapper cover-wrapper">
-
-				<div class="job_listing-entry-thumbnail">
-					<div style="background-image: url('https://a2.muscache.com/im/pictures/42578018/642d1eab_original.jpg?aki_policy=x_medium"></div>
-				</div>
-				<div class="job_listing-entry-meta">
-					        <h1 itemprop="name" class="job_listing-title">
-            $110        </h1>
-    <div class="job_listing-location job_listing-location-formatted"><a class="google_map_link" href="http://maps.google.com/maps?saddr=Current+Location&daddr=43.4617715,-79.68714039999998" target="_blank"><span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="streetAddress">2 bedroom apartment</span><br/><span itemprop="addressLocality">Oakville Villas, DuPont</span> </div>        <div class="job_listing-phone">
-            <span itemprop="telephone"><a href="tel:2892910265">(289) 291-0265</a></span>
-        </div>
-    				</div>
-
-			</div>
-
-            		</header><!-- .entry-header -->
-
-		<footer class="job_listing-entry-footer">
-
-					<div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating" class="rating-4 job_listing-rating-wrapper" title="4 Reviews">
-			<span class="job_listing-rating-stars">
-				
-		<span class='stars-rating'>
-			
-									<span class="dashicons dashicons-star-filled"></span>
-				
-			
-									<span class="dashicons dashicons-star-filled"></span>
-				
-			
-									<span class="dashicons dashicons-star-filled"></span>
-				
-			
-									<span class="dashicons dashicons-star-filled"></span>
-				
-			
-									<span class="dashicons dashicons-star-filled"></span>
-				
-					</span>			</span>
-
-			<span class="job_listing-rating-average">
-				<span itemprop="ratingValue">4.8</span>
-			</span>
-			<span class="job_listing-rating-count">
-				<span itemprop="reviewCount">4</span> Reviews			</span>
-		</div>
-	<div class="job-manager-form wp-job-manager-bookmarks-form">
-	<div><a class="bookmark-notice" href="my-account/index.html">Login to bookmark this Listing</a></div>
-</div>
-		</footer><!-- .entry-footer -->
-
-	</div>
-</li><!-- #post-## -->
+<!-- #post-## -->
 
                     </ul>
 

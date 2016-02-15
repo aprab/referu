@@ -19,7 +19,10 @@ public class ListingsData {
 	private String _email;
 	
 	@Persistent  
-	private GeoPt _geoPT;
+	private Double _latitude;
+	
+	@Persistent  
+	private Double _longitude;
 	
 	@Persistent  
 	private String _nameOfListing;
@@ -32,11 +35,11 @@ public class ListingsData {
 	
 		
 	
-	public ListingsData(GeoPt geoPT, String email,
-			String nameOfListing, String description) {
+	public ListingsData(Double latitude, Double longitude,
+			String email,String nameOfListing, String description) {
 		
 		_email = email;
-		_geoPT = geoPT;
+		
 		_nameOfListing = nameOfListing;
 		_description = description;	
 	}

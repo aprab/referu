@@ -33,15 +33,28 @@ public class ListingsData {
 	@Persistent  
 	private String _phone;
 	
+	@Persistent
+	private Double _price;
+	
+	@Persistent
+	private String _url;
+	
 		
 	
-	public ListingsData(Double latitude, Double longitude,
-			String email,String nameOfListing, String description) {
+
+	public ListingsData(GeoPt geoPT, String email,
+			String nameOfListing, String description, String phone, String url,
+			Double price) {
+
 		
 		_email = email;
 		
 		_nameOfListing = nameOfListing;
 		_description = description;	
+		_phone = phone;
+		_price = price;
+		_url = url;
+		
 	}
 	
 	public String getEmail() {
@@ -58,5 +71,17 @@ public class ListingsData {
 	
 	public GeoPt getPoint() {
 		return _geoPT;
+	}
+	
+	public String getPhone(){
+		return _phone;
+	}
+	
+	public Double getPrice(){
+		return _price;
+	}
+	
+	public String getUrl(){
+		return _url;
 	}
 }

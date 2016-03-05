@@ -45,10 +45,10 @@ public class CreateListing extends ReferUHTTPServlet {
 		GeoPt geoPT = 
 			new GeoPt(Float.parseFloat(latitude), Float.parseFloat(longitude));
 		
-		ListingsData listingData = new ListingsData(geoPT, 
-			email,nameOfVenue,description,phone,url,price);
+//		ListingsData listingData = new ListingsData(geoPT, 
+//			email,nameOfVenue,description,phone,url,price);
 		
-		pm.makePersistent(listingData);
+//		pm.makePersistent(listingData);
 		
 		addJsonOutput("valid", true);
 		printIterativeJsonOutput();

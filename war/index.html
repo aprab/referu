@@ -2,96 +2,336 @@
 <html lang="en-US">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link rel="profile" href="http://gmpg.org/xfn/11">
-	
-
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link href="http://gmpg.org/xfn/11" rel="profile">
 	<title>ReferU. Great deals on Great student apartments</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-
-	<script>
-
-		var myApp = angular.module('myApp',[]);
-
-		myApp.controller('MyController', ['$scope', function($scope) {
-				
-				$scope.allLocations = [
-					{
-						"name": "Bates",
-						"url": "http://www.bates.edu/wp-content/uploads/2014/05/hathorn_bates_6637390405_f95e0a72d6_b.jpg"
-					}, {
-						"name": "Claremont",
-						"url": "http://signaturebooks.com/wp-content/uploads/2010/03/claremont.jpg.jpeg"
-					}, {
-						"name": "Georgetown",
-						"url": "https://uadmissions.georgetown.edu/sites/uadmissions/files/styles/rotator_image_overlay_unit_profile/public/aerialview.jpg"
-					}, {
-						"name": "Cornell",
-						"url": "https://fe.fs.cornell.edu/img/mainPage/ArtsQuad.jpg"
-					}, {
-						"name": "Notre Dame",
-						"url": "http://budget.nd.edu/assets/88150/original/budget.jpg"
-					}
-				];
-
-				$scope.frontPageListings = [
-
-					{
-						"price":179,
-						"description":"3 bedroom apartments",
-						"address":"Andower House, Washington DC",
-						"phone":"(905)-555-5555",
-						"url":"https://a1.muscache.com/im/pictures/d1bbf39a-373a-4c71-8139-255cba9287d4.jpg?aki_policy=x_medium"
-					}, {
-						"price":183,
-						"description":"Studio",
-						"address":"M Street Towers, Washington DC",
-						"phone":"(905)-555-5555",
-						"url":"https://a2.muscache.com/im/pictures/34979778/60543e2e_original.jpg?aki_policy=x_medium"
-					}, {
-						"price":110,
-						"description":"2 Bedroom Apartment",
-						"address":"Oakville Villas, DuPont",
-						"phone":"(289)-291-0265",
-						"url":"https://a2.muscache.com/im/pictures/42578018/642d1eab_original.jpg?aki_policy=x_medium"
-					}
-				];
-
-					
-				
-
-		}]);
-
+	
+	<script src=
+		"https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js">
 	</script>
-	
-	
-<link rel="alternate" type="application/rss+xml" title="Listify &raquo; Feed" href="feed/index.html" />
-<link rel="alternate" type="application/rss+xml" title="Listify &raquo; Comments Feed" href="comments/feed/index.html" />
-		
-<link rel='stylesheet' id='wc-social-login-frontend-css'  href='wp-content/plugins/woocommerce-social-login/assets/css/frontend/wc-social-login.min-ver=1.7.0.css' type='text/css' media='all' />
 
-<style id='wc-social-login-frontend-inline-css' type='text/css'>
- a.button-social-login.button-social-login-facebook, .widget-area a.button-social-login.button-social-login-facebook, .social-badge.social-badge-facebook { background: #3b5998; } a.button-social-login.button-social-login-twitter, .widget-area a.button-social-login.button-social-login-twitter, .social-badge.social-badge-twitter { background: #00aced; } a.button-social-login.button-social-login-google, .widget-area a.button-social-login.button-social-login-google, .social-badge.social-badge-google { background: #dd4b39; } a.button-social-login.button-social-login-instagram, .widget-area a.button-social-login.button-social-login-instagram, .social-badge.social-badge-instagram { background: #517fa4; } 
-</style>
-<link rel='stylesheet' id='contact-form-7-css'  href='wp-content/plugins/contact-form-7/includes/css/styles-ver=4.3.1.css' type='text/css' media='all' />
-<link rel='stylesheet' id='jquery-ui-style-css'  href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css?ver=4.4.1' type='text/css' media='all' />
-<link rel='stylesheet' id='wc-bookings-styles-css'  href='wp-content/plugins/woocommerce-bookings/assets/css/frontend-ver=1.9.2.css' type='text/css' media='all' />
-<link rel='stylesheet' id='woocommerce-layout-css'  href='wp-content/plugins/woocommerce/assets/css/woocommerce-layout-ver=2.5.0.css' type='text/css' media='all' />
-<link rel='stylesheet' id='woocommerce-smallscreen-css'  href='wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen-ver=2.5.0.css' type='text/css' media='only screen and (max-width: 768px)' />
-<link rel='stylesheet' id='wp-job-manager-tags-frontend-css'  href='wp-content/plugins/wp-job-manager-tags/assets/css/style-ver=4.4.1.css' type='text/css' media='all' />
-<link rel='stylesheet' id='wpjm-extended-location-css'  href='wp-content/plugins/wp-job-manager-extended-location/assets/css/wp-job-manager-extended-location-ver=4.4.1.css' type='text/css' media='all' />
-<link rel='stylesheet' id='wp-job-manager-reviews-css'  href='wp-content/plugins/wp-job-manager-reviews/assets/css/wp-job-manager-reviews-ver=4.4.1.css' type='text/css' media='all' />
-<link rel='stylesheet' id='dashicons-css'  href='wp-includes/css/dashicons.min-ver=4.4.1.css' type='text/css' media='all' />
-<link rel='stylesheet' id='wc-paid-listings-packages-css'  href='wp-content/plugins/wp-job-manager-wc-paid-listings/assets/css/packages-ver=4.4.1.css' type='text/css' media='all' />
-<link rel='stylesheet' id='listify-fonts-css'  href='https://fonts.googleapis.com/css?family=Montserrat:400,700&subset=latin,latin-ext&ver=4.4.1' type='text/css' media='all' />
-<link rel='stylesheet' id='listify-css'  href='wp-content/themes/listify/css/style.min-ver=20151124.css' type='text/css' media='all' />
-<style id='listify-inline-css' type='text/css'>
-.nav-menu .sub-menu.category-list,ul.nav-menu .sub-menu.category-list,input,textarea,.site select,.facetwp-facet .facetwp-checkbox:before,.widget_layered_nav li a:before,.site-main .content-box select,.site-main .job_listings select,body .chosen-container-single .chosen-single,body .chosen-container-multi .chosen-choices li.search-field input[type=text],.select2-container .select2-choice,.entry-content div.mce-toolbar-grp{background-color:#f3f6f9;}.listing-cover,.entry-cover,.homepage-cover.page-cover,.list-cover{background-color:#e6e9ec;}input,textarea,input[type="checkbox"],input[type="radio"],.site select,.facetwp-facet .facetwp-checkbox:before,.widget_layered_nav li a:before,.site-main .content-box select,.site-main .job_listings select,.content-pagination .page-numbers,.facetwp-pager .facetwp-page,.js-toggle-area-trigger,.chosen-container-multi .chosen-choices,.wp-editor-wrap,.account-sign-in,.filter_by_tag,.job-manager-form fieldset.fieldset-job_hours,.ninja-forms-required-items,.showing_jobs,.summary .stock,.woocommerce-tabs .woocommerce-noreviews,.entry-content .rcp_form input[type="text"]:focus,.entry-content .rcp_form input[type="password"]:focus,.entry-content .rcp_form input[type="email"]:focus,.entry-content div.mce-toolbar-grp,body .chosen-container-single .chosen-single,body .chosen-container-multi .chosen-choices,body .chosen-container-multi .chosen-choices li.search-field input[type=text],.payment_methods li .payment_box,.search-choice-close,.filter_by_tag a:before,.woocommerce .quantity input[type="button"]{border-color:#ebeef1;}.payment_methods li{background-color:#ebeef1;}.map-marker.type-46:after{border-top-color:#1abc9c;}.map-marker.type-46 i:after{background-color:#1abc9c;}.map-marker.type-46 i:before{color:#1abc9c;}.map-marker.type-23:after{border-top-color:#2c3e50;}.map-marker.type-23 i:after{background-color:#2c3e50;}.map-marker.type-23 i:before{color:#2c3e50;}.map-marker.type-174:after{border-top-color:#627e82;}.map-marker.type-174 i:after{background-color:#627e82;}.map-marker.type-174 i:before{color:#627e82;}.map-marker.type-50:after{border-top-color:#eb974e;}.map-marker.type-50 i:after{background-color:#eb974e;}.map-marker.type-50 i:before{color:#eb974e;}.map-marker.type-49:after{border-top-color:#d64541;}.map-marker.type-49 i:after{background-color:#d64541;}.map-marker.type-49 i:before{color:#d64541;}.map-marker.type-75:after{border-top-color:#1e73be;}.map-marker.type-75 i:after{background-color:#1e73be;}.map-marker.type-75 i:before{color:#1e73be;}.map-marker.type-163:after{border-top-color:#1fc6b6;}.map-marker.type-163 i:after{background-color:#1fc6b6;}.map-marker.type-163 i:before{color:#1fc6b6;}.map-marker.type-29:after{border-top-color:#8f5c3d;}.map-marker.type-29 i:after{background-color:#8f5c3d;}.map-marker.type-29 i:before{color:#8f5c3d;}.map-marker.type-72:after{border-top-color:#6bd4e0;}.map-marker.type-72 i:after{background-color:#6bd4e0;}.map-marker.type-72 i:before{color:#6bd4e0;}.map-marker.type-41:after{border-top-color:#2574a9;}.map-marker.type-41 i:after{background-color:#2574a9;}.map-marker.type-41 i:before{color:#2574a9;}.map-marker.type-28:after{border-top-color:#95cb70;}.map-marker.type-28 i:after{background-color:#95cb70;}.map-marker.type-28 i:before{color:#95cb70;}.map-marker.type-48:after{border-top-color:#7ccc8d;}.map-marker.type-48 i:after{background-color:#7ccc8d;}.map-marker.type-48 i:before{color:#7ccc8d;}.map-marker.type-156:after{border-top-color:#3b8473;}.map-marker.type-156 i:after{background-color:#3b8473;}.map-marker.type-156 i:before{color:#3b8473;}.map-marker.type-22:after{border-top-color:#6084ba;}.map-marker.type-22 i:after{background-color:#6084ba;}.map-marker.type-22 i:before{color:#6084ba;}.map-marker.type-43:after{border-top-color:#114589;}.map-marker.type-43 i:after{background-color:#114589;}.map-marker.type-43 i:before{color:#114589;}.map-marker.type-79:after{border-top-color:#dd3333;}.map-marker.type-79 i:after{background-color:#dd3333;}.map-marker.type-79 i:before{color:#dd3333;}a,.content-pagination .page-numbers.current{color:#3396d1;}a:active,a:hover,.primary-header .current-account-toggle .sub-menu a{color:#1a7db8;}.job_position_featured .content-box{box-shadow:0 0 0 3px #3396d1;}#wpjmr-submit-ratings .star-rating .dashicons-star-filled,#wpjmr-list-reviews .star-rating .dashicons-star-filled,.stars-rating .dashicons.dashicons-star-filled,#wpjmr-submit-ratings .choose-rating .star:hover,#wpjmr-submit-ratings .choose-rating .star:hover ~ .star,#wpjmr-submit-ratings .choose-rating .star.active,#wpjmr-submit-ratings .choose-rating .star.active ~ .star{color:#77c04b;}.woocommerce .quantity input[type="button"]{color:#77c04b;}.woocommerce-message,.job-manager-message{border-color:#77c04b;}.type-product .onsale,.type-product .price ins,.job-package-tag{background-color:#3396d1;}.woocommerce-tabs .tabs .active a{color:#3396d1;}.as-seen-on{background-color:#3396d1;}body,button,input,select,textarea,.current-account-user-info,.listify_widget_panel_listing_tags .tag,.entry-cover.no-image,.entry-cover.no-image a,.listing-cover.no-image,.listing-cover.no-image a:not(.button),.entry-footer .button.button-small,.button[name="apply_coupon"],.button[name="apply_coupon"]:hover,.widget a,.content-pagination .page-numbers,.facetwp-pager .facetwp-page,.type-job_listing.style-list .job_listing-entry-header,.type-job_listing.style-list .job_listing-entry-header a,.js-toggle-area-trigger,.job-dashboard-actions a,body.fixed-map .site-footer,body.fixed-map .site-footer a,.homepage-cover .job_search_form .select:after,.tabbed-listings-tabs a,.archive-job_listing-toggle,.map-marker-info a,.map-marker-info a:hover,.job-manager-form fieldset.fieldset-job_hours,.listing-by-term-title a,.listings-by-term-more a:hover,.search_location .locate-me:hover:before,.no-image .ion-ios-star:before,.no-image .ion-ios-star-half:before,.back-to-listing a,body .chosen-container-single .chosen-single,.select2-default,.select2-container .select2-choice,.select2-container-multi .select2-choices .select2-search-choice,body .homepage-cover .chosen-container .chosen-results li,.filter_by_tag a,a.upload-images,a.upload-images span,.nav-menu .sub-menu.category-list a,.woocommerce-tabs .tabs a,.job-manager-bookmark-actions a{color:#717a8f;}.comment-meta a,.commentlist a.comment-ago,div:not(.no-image) .star-rating:before,div:not(.no-image) .stars span a:before,.cta-subtext,.cta-description p,.job_listing-author-descriptor,.entry-meta,.entry-meta a,.home-widget-description,.listings-by-term-content .job_listing-rating-count,.listings-by-term-more a,.search-form .search-submit:before,.mfp-content .mfp-close:before,div:not(.job-package-price) .woocommerce .amount,.woocommerce .quantity,.showing_jobs{color:#949db2;}.social-profiles a,.listing-gallery-nav .slick-dots li button:before{background-color:#949db2;}.search-overlay,.primary-header{background-color:#3396d1;}.nav-menu a,.nav-menu li:before,.nav-menu li:after,.nav-menu a:before,.nav-menu a:after,.nav-menu ul a,.nav-menu.primary ul ul a,.nav-menu.primary ul ul li:before,.nav-menu.primary ul ul li:after{color:#3396d1;}.search-overlay a.search-overlay-toggle{color:#ffffff;}.listify_widget_panel_listing_tags .tag.active:before,.job-package-includes li:before,.woocommerce-tabs .tabs .active a{color:#77c04b;}.button-secondary:hover,.button-secondary:focus,input[type="button"].facetwp-reset:hover,input[type="button"].facetwp-reset:focus,.star-rating-wrapper a:hover ~ a:before,.star-rating-wrapper a:hover:before,.star-rating-wrapper a.active ~ a:before,.star-rating-wrapper a.active:before,.woocommerce-tabs .stars span a:hover:before,.woocommerce-tabs .stars span a.active:before,.woocommerce-tabs .stars span a.hover:before,.tabbed-listings-tabs a:hover,.tabbed-listings-tabs a.active,.archive-job_listing-toggle.active{color:#549d28;}button:not([role="presentation"]),input[type="button"],input[type="reset"],input[type="submit"],.button,.facetwp-type-slider .noUi-connect,.ui-slider .ui-slider-range,.listing-owner,.comment-rating,.job_listing-rating-average,.map-marker.active:after,.cluster,.widget_calendar tbody a,.job_listing-author-info-more a:first-child,.load_more_jobs{background-color:#77c04b;}button:not([role="presentation"]):hover,button:not([role="presentation"]):focus,input[type="button"]:hover,input[type="button"]:focus,input[type="reset"]:hover,input[type="reset"]:focus,input[type="submit"]:hover,input[type="submit"]:focus,.button:hover,.button:focus,::selection,.load_more_jobs:hover,.update_results.refreshing{background-color:#72bb46;}::-moz-selection{background-color:#72bb46;}.facetwp-type-slider .noUi-horizontal .noUi-handle,.ui-slider .ui-slider-handle,.tabbed-listings-tabs a:hover,.tabbed-listings-tabs a.active,.archive-job_listing-toggle.active,li.job-package:hover,.job_listing_packages ul.job_packages li:hover,.woocommerce-info{border-color:#77c04b;}input[type=checkbox]:checked:before,.facetwp-facet .facetwp-checkbox.checked:after,.facetwp-facet .facetwp-link.checked,.widget_layered_nav li.chosen a:after,.widget_layered_nav li.chosen a,.ion-ios-star:before,.ion-ios-star-half:before,.upload-images:hover .upload-area,.comment-author .rating-stars .ion-ios-star,.archive-job_listing-layout.button.active,.job_listing_packages ul.job_packages li label,.upload-images:hover,.filter_by_tag a:after,.search-choice-close:after,.claimed-ribbon span:before{color:#3396d1;}.button-secondary,input[type="button"].facetwp-reset,.job_listing-author-info-more a:last-child{background-color:#3396d1;}.button-secondary:hover,.button-secondary:focus,input[type="button"].facetwp-reset:hover,input[type="button"].facetwp-reset:focus{background-color:#2e91cc;}.upload-images:hover{border-color:#3396d1;}.site-footer-widgets{background-color:#2f3339;}.site-footer{background-color:#22262c;}
-@media screen and (min-width: 768px){.nav-menu .sub-menu.category-list{background-color:#f0f3f6;}}
-@media screen and (min-width: 992px){.nav-menu.primary a,.nav-menu.primary li:before,.nav-menu.primary li:after,.nav-menu.primary a:before,.nav-menu.primary a:after{color:#ffffff;}.primary.nav-menu .current-cart .current-cart-count{background-color:#77c04b;border-color:#3396d1;}}
-</style>
-<!--link rel='stylesheet' id='listify-child-css'  href='wp-content/themes/listify-child/style-ver=4.4.1.css' type='text/css' media='all' />
+	
+	<script src = "angularinternal.js"></script>
+		   
+	
+	<link href=
+	'https://fonts.googleapis.com/css?family=Montserrat:400,700&subset=latin,latin-ext&ver=4.4.1'
+	id='listify-fonts-css' media='all' rel='stylesheet' type='text/css'>
+
+	<link href='wp-content/themes/listify/css/style.css' id=
+	'listify-css' media='all' rel='stylesheet' type='text/css'>
+
+	<style id='listify-inline-css' type='text/css'>
+		   .nav-menu .sub-menu.category-list,
+		   ul.nav-menu .sub-menu.category-list,
+		   input,
+		   textarea,
+		   .site select,
+		   .facetwp-facet .facetwp-checkbox:before,
+		   .widget_layered_nav li a:before,
+		   .site-main .content-box select,
+		   .site-main .job_listings select,
+		   body .chosen-container-single .chosen-single,
+		   body .chosen-container-multi .chosen-choices li.search-field input[type=text],
+		   .select2-container .select2-choice,
+		   .entry-content div.mce-toolbar-grp {
+			   background-color: #f3f6f9;
+		   }
+		   .listing-cover,
+		   .entry-cover,
+		   .homepage-cover.page-cover,
+		   .list-cover {
+			   background-color: #e6e9ec;
+		   }
+		   input,
+		   textarea,
+		   input[type="checkbox"],
+		   input[type="radio"],
+		   .site select,
+		   .facetwp-facet .facetwp-checkbox:before,
+		   .widget_layered_nav li a:before,
+		   .site-main .content-box select,
+		   .site-main .job_listings select,
+		   .content-pagination .page-numbers,
+		   .facetwp-pager .facetwp-page,
+		   .js-toggle-area-trigger,
+		   .chosen-container-multi .chosen-choices,
+		   .wp-editor-wrap,
+		   .account-sign-in,
+		   .filter_by_tag,
+		   .job-manager-form fieldset.fieldset-job_hours,
+		   .ninja-forms-required-items,
+		   .showing_jobs,
+		   .summary .stock,
+		   .woocommerce-tabs .woocommerce-noreviews,
+		   .entry-content .rcp_form input[type="text"]:focus,
+		   .entry-content .rcp_form input[type="password"]:focus,
+		   .entry-content .rcp_form input[type="email"]:focus,
+		   .entry-content div.mce-toolbar-grp,
+		   body .chosen-container-single .chosen-single,
+		   body .chosen-container-multi .chosen-choices,
+		   body .chosen-container-multi .chosen-choices li.search-field input[type=text],
+		   .payment_methods li .payment_box,
+		   .search-choice-close,
+		   .filter_by_tag a:before,
+		   .woocommerce .quantity input[type="button"] {
+			   border-color: #ebeef1;
+		   }
+		   .payment_methods li {
+			   background-color: #ebeef1;
+		   }
+		   
+		   a,
+		   .content-pagination .page-numbers.current {
+			   color: #3396d1;
+		   }
+		   a:active,
+		   a:hover,
+		   .primary-header .current-account-toggle .sub-menu a {
+			   color: #1a7db8;
+		   }
+		   .job_position_featured .content-box {
+			   box-shadow: 0 0 0 3px #3396d1;
+		   }
+		   #wpjmr-submit-ratings .star-rating .dashicons-star-filled,
+		   #wpjmr-list-reviews .star-rating .dashicons-star-filled,
+		   .stars-rating .dashicons.dashicons-star-filled,
+		   #wpjmr-submit-ratings .choose-rating .star:hover,
+		   #wpjmr-submit-ratings .choose-rating .star:hover ~ .star,
+		   #wpjmr-submit-ratings .choose-rating .star.active,
+		   #wpjmr-submit-ratings .choose-rating .star.active ~ .star {
+			   color: #77c04b;
+		   }
+		   .woocommerce .quantity input[type="button"] {
+			   color: #77c04b;
+		   }
+		   .woocommerce-message,
+		   .job-manager-message {
+			   border-color: #77c04b;
+		   }
+		   .type-product .onsale,
+		   .type-product .price ins,
+		   .job-package-tag {
+			   background-color: #3396d1;
+		   }
+		   .woocommerce-tabs .tabs .active a {
+			   color: #3396d1;
+		   }
+		   .as-seen-on {
+			   background-color: #3396d1;
+		   }
+		   body,
+		   button,
+		   input,
+		   select,
+		   textarea,
+		   .current-account-user-info,
+		   .listify_widget_panel_listing_tags .tag,
+		   .entry-cover.no-image,
+		   .entry-cover.no-image a,
+		   .listing-cover.no-image,
+		   .listing-cover.no-image a:not(.button),
+		   .entry-footer .button.button-small,
+		   .button[name="apply_coupon"],
+		   .button[name="apply_coupon"]:hover,
+		   .widget a,
+		   .content-pagination .page-numbers,
+		   .facetwp-pager .facetwp-page,
+		   .type-job_listing.style-list .job_listing-entry-header,
+		   .type-job_listing.style-list .job_listing-entry-header a,
+		   .js-toggle-area-trigger,
+		   .job-dashboard-actions a,
+		   body.fixed-map .site-footer,
+		   body.fixed-map .site-footer a,
+		   .homepage-cover .job_search_form .select:after,
+		   .tabbed-listings-tabs a,
+		   .archive-job_listing-toggle,
+		   .map-marker-info a,
+		   .map-marker-info a:hover,
+		   .job-manager-form fieldset.fieldset-job_hours,
+		   .listing-by-term-title a,
+		   .listings-by-term-more a:hover,
+		   .search_location .locate-me:hover:before,
+		   .no-image .ion-ios-star:before,
+		   .no-image .ion-ios-star-half:before,
+		   .back-to-listing a,
+		   body .chosen-container-single .chosen-single,
+		   .select2-default,
+		   .select2-container .select2-choice,
+		   .select2-container-multi .select2-choices .select2-search-choice,
+		   body .homepage-cover .chosen-container .chosen-results li,
+		   .filter_by_tag a,
+		   a.upload-images,
+		   a.upload-images span,
+		   .nav-menu .sub-menu.category-list a,
+		   .woocommerce-tabs .tabs a,
+		   .job-manager-bookmark-actions a {
+			   color: #717a8f;
+		   }
+		   .comment-meta a,
+		   .commentlist a.comment-ago,
+		   div:not(.no-image) .star-rating:before,
+		   div:not(.no-image) .stars span a:before,
+		   .cta-subtext,
+		   .cta-description p,
+		   .job_listing-author-descriptor,
+		   .entry-meta,
+		   .entry-meta a,
+		   .home-widget-description,
+		   .listings-by-term-content .job_listing-rating-count,
+		   .listings-by-term-more a,
+		   .search-form .search-submit:before,
+		   .mfp-content .mfp-close:before,
+		   div:not(.job-package-price) .woocommerce .amount,
+		   .woocommerce .quantity,
+		   .showing_jobs {
+			   color: #949db2;
+		   }
+		   .social-profiles a,
+		   .listing-gallery-nav .slick-dots li button:before {
+			   background-color: #949db2;
+		   }
+		   .search-overlay,
+		   .primary-header {
+			   background-color: #1c3966;
+		   }
+		   .nav-menu a,
+		   .nav-menu li:before,
+		   .nav-menu li:after,
+		   .nav-menu a:before,
+		   .nav-menu a:after,
+		   .nav-menu ul a,
+		   .nav-menu.primary ul ul a,
+		   .nav-menu.primary ul ul li:before,
+		   .nav-menu.primary ul ul li:after {
+			   color: #3396d1;
+		   }
+		   .search-overlay a.search-overlay-toggle {
+			   color: #ffffff;
+		   }
+		   .listify_widget_panel_listing_tags .tag.active:before,
+		   .job-package-includes li:before,
+		   .woocommerce-tabs .tabs .active a {
+			   color: #77c04b;
+		   }
+		   .button-secondary:hover,
+		   .button-secondary:focus,
+		   input[type="button"].facetwp-reset:hover,
+		   input[type="button"].facetwp-reset:focus,
+		   .star-rating-wrapper a:hover ~ a:before,
+		   .star-rating-wrapper a:hover:before,
+		   .star-rating-wrapper a.active ~ a:before,
+		   .star-rating-wrapper a.active:before,
+		   .woocommerce-tabs .stars span a:hover:before,
+		   .woocommerce-tabs .stars span a.active:before,
+		   .woocommerce-tabs .stars span a.hover:before,
+		   .tabbed-listings-tabs a:hover,
+		   .tabbed-listings-tabs a.active,
+		   .archive-job_listing-toggle.active {
+			   color: #549d28;
+		   }
+		   button:not([role="presentation"]),
+		   input[type="button"],
+		   input[type="reset"],
+		   input[type="submit"],
+		   .button,
+		   .facetwp-type-slider .noUi-connect,
+		   .ui-slider .ui-slider-range,
+		   .listing-owner,
+		   .comment-rating,
+		   .job_listing-rating-average,
+		   .map-marker.active:after,
+		   .cluster,
+		   .widget_calendar tbody a,
+		   .job_listing-author-info-more a:first-child,
+		   .load_more_jobs {
+			   background-color: #77c04b;
+		   }
+		   button:not([role="presentation"]):hover,
+		   button:not([role="presentation"]):focus,
+		   input[type="button"]:hover,
+		   input[type="button"]:focus,
+		   input[type="reset"]:hover,
+		   input[type="reset"]:focus,
+		   input[type="submit"]:hover,
+		   input[type="submit"]:focus,
+		   .button:hover,
+		   .button:focus,
+		   ::selection,
+		   .load_more_jobs:hover,
+		   .update_results.refreshing {
+			   background-color: #72bb46;
+		   }
+		   ::-moz-selection {
+			   background-color: #72bb46;
+		   }
+		   .facetwp-type-slider .noUi-horizontal .noUi-handle,
+		   .ui-slider .ui-slider-handle,
+		   .tabbed-listings-tabs a:hover,
+		   .tabbed-listings-tabs a.active,
+		   .archive-job_listing-toggle.active,
+		   li.job-package:hover,
+		   .job_listing_packages ul.job_packages li:hover,
+		   .woocommerce-info {
+			   border-color: #77c04b;
+		   }
+		   input[type=checkbox]:checked:before,
+		   .facetwp-facet .facetwp-checkbox.checked:after,
+		   .facetwp-facet .facetwp-link.checked,
+		   .widget_layered_nav li.chosen a:after,
+		   .widget_layered_nav li.chosen a,
+		   .ion-ios-star:before,
+		   .ion-ios-star-half:before,
+		   .upload-images:hover .upload-area,
+		   .comment-author .rating-stars .ion-ios-star,
+		   .archive-job_listing-layout.button.active,
+		   .job_listing_packages ul.job_packages li label,
+		   .upload-images:hover,
+		   .filter_by_tag a:after,
+		   .search-choice-close:after,
+		   .claimed-ribbon span:before {
+			   color: #3396d1;
+		   }
+		   .button-secondary,
+		   input[type="button"].facetwp-reset,
+		   .job_listing-author-info-more a:last-child {
+			   background-color: #3396d1;
+		   }
+		   .button-secondary:hover,
+		   .button-secondary:focus,
+		   input[type="button"].facetwp-reset:hover,
+		   input[type="button"].facetwp-reset:focus {
+			   background-color: #2e91cc;
+		   }
+		   .upload-images:hover {
+			   border-color: #3396d1;
+		   }
+		   .site-footer-widgets {
+			   background-color: #2f3339;
+		   }
+		   .site-footer {
+			   background-color: #22262c;
+		   }
+		   @media screen and (min-width: 768px) {
+			   .nav-menu .sub-menu.category-list {
+				   background-color: #f0f3f6;
+			   }
+		   }
+		   @media screen and (min-width: 992px) {
+			   .nav-menu.primary a,
+			   .nav-menu.primary li:before,
+			   .nav-menu.primary li:after,
+			   .nav-menu.primary a:before,
+			   .nav-menu.primary a:after {
+				   color: #ffffff;
+			   }
+			   .primary.nav-menu .current-cart .current-cart-count {
+				   background-color: #77c04b;
+				   border-color: #3396d1;
+			   }
+		   }
+	</style>
+	<!--link rel='stylesheet' id='listify-child-css'  href='wp-content/themes/listify-child/style-ver=4.4.1.css' type='text/css' media='all' />
 <link rel='stylesheet' id='jetpack_css-css'  href='wp-content/plugins/jetpack/css/jetpack-ver=3.9.1.css' type='text/css' media='all' />
 <script type='text/javascript' src='wp-includes/js/jquery/jquery-ver=1.11.3.js'></script>
 <script type='text/javascript' src='wp-includes/js/jquery/jquery-migrate.min-ver=1.2.1.js'></script>
@@ -110,638 +350,754 @@
 <meta name="generator" content="WooCommerce 2.5.0" />
 <link rel="canonical" href="index.html" />
 <link rel='shortlink' href='index.html' /-->
-	
 </head>
+<body ng-app = "myApp" ng-controller = "MyController" class=
+"home page page-id-6 page-template page-template-page-templates page-template-template-home page-template-page-templatestemplate-home-php template-home fixed-header directory-fields color-scheme-default footer- listify listify-120 wp-job-manager wp-job-manager-bookmarks wp-job-manager-wc-paid-listings wp-job-manager-tags wp-job-manager-regions wp-job-manager-reviews wp-job-manager-products wp-job-manager-claim-listing woocommerce-social-login woocommerce woocommerce-bookings jetpack ratings listify-child wp-job-manager-categories-enabled wp-job-manager-categories-only">
+<div class="hfeed site" id="page">
+		<header class="site-header" id="masthead" role="banner">
+			<div class="primary-header">
+				<div class="container">
+					<div class="primary-header-inner">
+						<div class="site-branding">
+							<a class="custom-header" href="index.html" rel="home" title=
+							"Listify"><img alt="" src="referu/Logo_Transparent.png" style=
+							"width:110px"></a>
+						</div>
+						<div class="primary nav-menu">
+							
+							<div class="nav-menu-container">
+								
+								<ul class="menu" id="menu-menu">
+									
+									<li class="menu-item menu-type-link">
+									
+										<a class="search-overlay-toggle" data-toggle="#search-header" href=
+										"index.html#search-header"></a>
+									
+									</li>
+									
+									<li class=
+										"menu-item menu-item-type-post_type menu-item-object-page menu-item-59"
+										id="menu-item-59">
 
-<body ng-app = "myApp"  ng-controller="MyController" class="home page page-id-6 page-template page-template-page-templates page-template-template-home page-template-page-templatestemplate-home-php template-home fixed-header directory-fields color-scheme-default footer- listify listify-120 wp-job-manager wp-job-manager-bookmarks wp-job-manager-wc-paid-listings wp-job-manager-tags wp-job-manager-regions wp-job-manager-reviews wp-job-manager-products wp-job-manager-claim-listing woocommerce-social-login woocommerce woocommerce-bookings jetpack ratings listify-child wp-job-manager-categories-enabled wp-job-manager-categories-only">
-
-<div id="page" class="hfeed site" >
-
-	<header id="masthead" class="site-header" role="banner">
-		<div class="primary-header">
-			<div class="container">
-				<div class="primary-header-inner">
-					<div class="site-branding">
-						<a href="index.html" title="Listify" rel="home" class="custom-header"><img src="referu/Logo_Transparent.png" alt="" style = "width:110px"></a>
-						
-						
-					</div>
-
-					<div class="primary nav-menu">
-						<div class="nav-menu-container">
-							<ul id="menu-menu" class="menu">
-								<li class="menu-item menu-type-link">
-									<a href="index.html#search-header" data-toggle="#search-header" class="search-overlay-toggle"></a>
-								</li>
-								<!-- <li class="menu-item menu-type-link">
-									<a href="cart/index.html" class="current-cart">
-										<span class="current-cart-count">0</span> Items
-									</a>
-								</li> -->
-								<li id="menu-item-59" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59">
-									<a href="blog/index.html">Referrals</a>
-								</li>
-								<!-- <li id="menu-item-58" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-58">
+										<a href="blog/index.html">Referrals</a>
+									
+									</li>
+									<!-- <li id="menu-item-58" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-58">
 									<a href="plans-and-pricing/index.html">Plans and Pricing</a>
 								</li> -->
-								<li id="menu-item-4482" class="popup-wide menu-item menu-item-type-post_type menu-item-object-page menu-item-4482">
-									<a href="./my-account/index.html" class="popup-trigger-ajax popup-wide">Log In</a>
+									<li class=
+									"popup-wide menu-item menu-item-type-post_type menu-item-object-page menu-item-4482"
+									id="menu-item-4482">
+										<a class="popup-trigger-ajax popup-wide" href=
+										"./my-account/index.html">Log In</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="search-overlay" id="search-header">
+						<div class="container">
+							<form action="listings/index.html" class="search-form" method="get"
+							role="search">
+								<label><span class="screen-reader-text">Search for:</span>
+								<input class="search-field" name="search_keywords" placeholder="Search"
+								title="Search for:" type="search" value=""></label> <button class=
+								"search-submit" type="submit"></button>
+							</form><a class="ion-close search-overlay-toggle" data-toggle=
+							"#search-header" href="index.html#search-header"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<nav class="main-navigation" id="site-navigation" role="navigation">
+				<div class="container">
+					<a class="navigation-bar-toggle" href="index.html#"><i class=
+					"ion-navicon-round"></i> Menu</a>
+					<div class="navigation-bar-wrapper">
+						<div class="primary nav-menu">
+							<ul class="primary nav-menu" id="menu-menu-1">
+								<li class="menu-item menu-type-link">
+									<a class="search-overlay-toggle" data-toggle="#search-header" href=
+									"index.html#search-header"></a>
+								</li>
+								<li class="menu-item menu-type-link">
+									<a class="current-cart" href="cart/index.html"><span class=
+									"current-cart-count">0</span> Items</a>
+								</li>
+								<li class=
+								"menu-item menu-item-type-post_type menu-item-object-page menu-item-59">
+								<a href="blog/index.html">Referrals</a>
+								</li>
+								<li class=
+								"menu-item menu-item-type-post_type menu-item-object-page menu-item-58">
+								<a href="plans-and-pricing/index.html">Plans and Pricing</a>
+								</li>
+								<li class=
+								"popup-wide menu-item menu-item-type-post_type menu-item-object-page menu-item-4482">
+								<a class="popup-trigger-ajax popup-wide" href=
+								"my-account/index.html">Log In</a>
 								</li>
 							</ul>
-						</div>					</div>
-				</div>
-
-				<div id="search-header" class="search-overlay">
-					<div class="container">
-						
-						<form role="search" method="get" class="search-form" action="listings/index.html">
-							<label>
-								<span class="screen-reader-text">Search for:</span>
-								<input type="search" class="search-field" placeholder="Search" value="" name="search_keywords" title="Search for:" />
-							</label>
-							<button type="submit" class="search-submit"></button>
-						</form>
-						<a href="index.html#search-header" data-toggle="#search-header" class="ion-close search-overlay-toggle"></a>
-					</div>
-				</div>
-             </div>
-		</div>
-
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<div class="container">
-				<a href="index.html#" class="navigation-bar-toggle">
-					<i class="ion-navicon-round"></i>
-					Menu				</a>
-
-				<div class="navigation-bar-wrapper">
-					<div class="primary nav-menu"><ul id="menu-menu-1" class="primary nav-menu"><li class="menu-item menu-type-link"><a href="index.html#search-header" data-toggle="#search-header" class="search-overlay-toggle"></a></li><li class="menu-item menu-type-link"><a href="cart/index.html" class="current-cart"><span class="current-cart-count">0</span> Items</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59"><a href="blog/index.html">Referrals</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-58"><a href="plans-and-pricing/index.html">Plans and Pricing</a></li>
-<li class="popup-wide menu-item menu-item-type-post_type menu-item-object-page menu-item-4482"><a href="my-account/index.html" class="popup-trigger-ajax popup-wide">Log In</a></li>
-</ul></div>
-</form>
-                <div class="container">
-
-</div>
-                    <!--<a href="listings/index.html">View All</a>-->
-                </div>
-          				</div>
-
-									<a href="index.html#search-navigation" data-toggle="#search-navigation" class="ion-search search-overlay-toggle"></a>
-
-					<div id="search-navigation" class="search-overlay">
-						
-<form role="search" method="get" class="search-form" action="listings/index.html">
-	<label>
-		<span class="screen-reader-text">Search for:</span>
-		<input type="search" class="search-field" placeholder="Search" value="" name="search_keywords" title="Search for:" />
-	</label>
-	<button type="submit" class="search-submit"></button>
-</form>
-						<a href="index.html#search-navigation" data-toggle="#search-navigation" class="ion-close search-overlay-toggle"></a>
-					</div>
-							</div>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
-
-	
-	<div id="content" class="site-content">
-
-	
-		
-		
-			
-			<div style="background-image: url('referu/background.jpg');" class="homepage-cover page-cover entry-cover has-image">
-				<div class="cover-wrapper container">
-					<div class="listify_widget_search_listings"><div class="home-widget-section-title"><h1 class="home-widget-title">Search for student apartments!<h2 class="home-widget-description">
-
-ReferU helps you find verified student apartment listings around your university<br/>Let's explore</h2></h1></div>
-        <a href="index.html#" data-toggle=".job_filters" class="js-toggle-area-trigger">Toggle Filters</a>
-    
-<form class="job_search_form" action="listings/index.html" method="GET">
-	
-	<div class="search_jobs">
-		
-		<div class="search_keywords">
-			<label for="search_keywords">Keywords</label>
-            <input type="text" name="search_keywords" id="search_keywords" placeholder="Keywords" />
-		</div>
-
-		<div class="search_location">
-			<label for="search_location">Location</label>
-			<input type="text" name="search_location" id="search_location" placeholder="Location" />
-		</div>
-
-
-        
-				<div class="search-radius-wrapper in-use">
-			<div class="search-radius-label">
-				<label for="use_search_radius">
-					<input type="checkbox" name="use_search_radius" id="use_search_radius"  checked='checked'/>
-					Radius: <span class="radi">300</span> mi				</label>
-			</div>
-			<div class="search-radius-slider">
-				<div id="search-radius"></div>
-			</div>
-
-			<input type="hidden" id="search_radius" name="search_radius" value="300" />
-		</div>
-
-		<input type="hidden" id="search_lat" name="search_lat" value="0" />
-  		<input type="hidden" id="search_lng" name="search_lng" value="0" />
-	<div class="filter_wide filter_by_tag">Filter by tag: <span class="filter_by_tag_cloud"></span></div><input type="hidden" name="search_region" class="search_region" value="" />	</div>
-
-	<p class="filter-by-type-label">Filter by type:</p><input type="hidden" id="search_context" name="search_context" value="6" />	<ul class="job_types">
-			</ul>
-	<input type="hidden" name="filter_job_type[]" value="" />
-<button type="submit" data-refresh="Loading..." data-label="Search Listings" name="update_results" class="update_results">Search Listings</button><div class="showing_jobs"></div></form>
-
-        <div class="archive-job_listing-filter-title">
-            <div class="archive-job_listing-layout-wrapper">
-                
-                <a href="index.html#" data-style="grid" class="archive-job_listing-layout button active"><span class="ion-grid"></span></a>
-                <a href="index.html#" data-style="list" class="archive-job_listing-layout button"><span class="ion-navicon-round"></span></a>
-
-                            </div>
-
-            <h3 class="archive-job_listing-found">
-                <span class="results-found">0</span> Results Found            </h3>
-        </div>
-    
-<noscript>Your browser does not support JavaScript, or it is disabled. JavaScript must be enabled in order to view listings.</noscript>
-</div>				</div>
-
-				<div style="width: 750px; " class="wp-video">
-					<!-- <video class="wp-video-shortcode" id="video-6-1" width="750" height="422" loop="1" autoplay="1" preload="auto" controls="controls"><source type="" src="https://player.vimeo.com/external/118518515.hd.mp4?s=e0741e40d2d8b5f1f1d12a2bcb0cedce&#038;_=1" /><source type="video/webm" src="https://f6ca679df901af69ace6-d3d26a34307edc4f7eeb40d85a64c4a7.ssl.cf5.rackcdn.com/listify-loops-new.webm?_=1" /></video> -->
-				</div>
-<p>ReferU helps you find out whats happening in your city, Let&#8217;s explore.</p>
-			</div>
-
-			
-		
-		
-		<div class="container homepage-hero-style-video">
-
-										
-			<aside id="listify_widget_taxonomy_image_grid-5" class="home-widget listify_widget_taxonomy_image_grid"><div class="home-widget-section-title"><h2 class="home-widget-title">Explore around your university<h2 class="home-widget-description">Find listings you like and book em!</h2></h2></div>
-        <div class="row">
-
-            
-            <section ng-repeat = "eachVariable in allLocations" id="image-grid-term-chandler-arizona" class="col-xs-12 col-sm-6 col-md-4 image-grid-item">
-                <div style="background-image: url('{{eachVariable.url}}');" class="col-xs-12 col-sm-6 col-md-6 image-grid-cover entry-cover has-image">
-                    <a href="listing-region/chandler-arizona/index.html" class="image-grid-clickbox"></a>
-                    <a href="listing-region/chandler-arizona/index.html" class="cover-wrapper">{{eachVariable.name}}</a>
-                </div>
-            </section>
-
-            
-           <!--  <section id="image-grid-term-missouri" class="col-xs-12 col-sm-6 col-md-4 image-grid-item">
-                <div style="background-image: url('http://signaturebooks.com/wp-content/uploads/2010/03/claremont.jpg.jpeg');" class="col-xs-12 col-sm-6 col-md- image-grid-cover entry-cover has-image">
-                    <a href="listing-region/missouri/index.html" class="image-grid-clickbox"></a>
-                    <a href="listing-region/missouri/index.html" class="cover-wrapper">Claremont</a>
-                </div>
-            </section>
-
-            
-            <section id="image-grid-term-colorado" class="col-xs-12 col-sm-6 col-md-6 image-grid-item">
-                <div style="background-image: url('https://uadmissions.georgetown.edu/sites/uadmissions/files/styles/rotator_image_overlay_unit_profile/public/aerialview.jpg');" class="col-xs-12 col-sm-6 col-md- image-grid-cover entry-cover has-image">
-                    <a href="listing-region/colorado/index.html" class="image-grid-clickbox"></a>
-                    <a href="listing-region/colorado/index.html" class="cover-wrapper">Georgetown</a>
-                </div>
-            </section>
-
-            
-            <section id="image-grid-term-toronto" class="col-xs-12 col-sm-6 col-md-3 image-grid-item">
-                <div style="background-image: url('https://fe.fs.cornell.edu/img/mainPage/ArtsQuad.jpg');" class="col-xs-12 col-sm-6 col-md- image-grid-cover entry-cover has-image">
-                    <a href="listing-region/toronto/index.html" class="image-grid-clickbox"></a>
-                    <a href="listing-region/toronto/index.html" class="cover-wrapper">Cornell</a>
-                </div>
-            </section>
-
-            
-            <section id="image-grid-term-british-columbia" class="col-xs-12 col-sm-6 col-md-3 image-grid-item">
-                <div style="background-image: url('http://budget.nd.edu/assets/88150/original/budget.jpg');" class="col-xs-12 col-sm-6 col-md- image-grid-cover entry-cover has-image">
-                    <a href="listing-region/british-columbia/index.html" class="image-grid-clickbox"></a>
-                    <a href="listing-region/british-columbia/index.html" class="cover-wrapper">Notre Dame</a>
-                </div>
-            </section> -->
-
-            
-        </div>
-
-        </aside><aside id="listify_widget_recent_listings-5" class="home-widget listify_widget_recent_listings"><div class="home-widget-section-title"><h2 class="home-widget-title">Recent Listings<h2 class="home-widget-description">Discover some of our best listings</h2></h2></div>
-        <ul class="job_listings">
-            
-                
-<li  ng-repeat = "eachVariable in frontPageListings" id="job_listing-685" class="job_listing post-685 type-job_listing status-publish has-post-thumbnail hentry job_listing_region-toronto job_listing_category-barbershop job_listing_tag-accepts-credit-cards job_listing_tag-good-for-kids job_listing_tag-wheelchair-accessible job_listing_tag-wifi claimed col-xs-12 col-sm-6 col-md-4 style-grid" data-grid-columns="col-xs-12 col-sm-6 col-md-4" data-id="685" data-link="listing/555-liberty-village-toronto-ontario-canada-astoundify-barbershop/index.html" data-thumb="https://demo.astoundify.com/listify/wp-content/uploads/sites/39/job_listings/2014/11/Stocksy_txp782c31421CE000_Medium_85879-150x150.jpg" data-title="Astoundify Barbershop" data-address="555 Liberty Village, Toronto, Ontario, Canada" data-longitude="-79.42553470000001" data-latitude="43.6380835" data-color="#627e82" data-icon="ion-scissors" data-term="174" data-featured="" data-rating="4 Stars">
-
-	<div class="content-box">
-
-		<a href="listing/555-liberty-village-toronto-ontario-canada-astoundify-barbershop/index.html" class="job_listing-clickbox"></a>
-
-		<header style="background-image: url('{{eachVariable.url}}');" class="job_listing-entry-header listing-cover has-image">
-            
-			<div class="job_listing-entry-header-wrapper cover-wrapper">
-
-				<div class="job_listing-entry-thumbnail">
-					<div style="background-image: url('{{eachVariable.url}}');" class="list-cover has-image"></div>
-				</div>
-				<div class="job_listing-entry-meta">
-					        <h1 itemprop="name" class="job_listing-title">
-            ${{eachVariable.price}}       </h1>
-    <a href="index.html#what-is-claimed" class="claimed-ribbon popup-trigger">
-	<span class="ion-checkmark-circled"></span>
-	<span class="tooltip">Verified Listing</span>
-</a>
-
-<div class="job_listing-location job_listing-location-formatted"><a class="google_map_link" href="http://maps.google.com/maps?saddr=Current+Location&daddr=43.6380835,-79.42553470000001" target="_blank"><span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">{{eachVariable.description}}<br/><span itemprop="addressLocality">{{eachVariable.address}}</span> <span itemprop="addressRegion">Washington DC</span> </div>        <div class="job_listing-phone">
-            <span itemprop="telephone"><a href="tel:9055555555">{{eachVariable.phone}}</a></span>
-        </div>
-    				</div>
-
-			</div>
-
-            		</header><!-- .entry-header -->
-
-		<footer class="job_listing-entry-footer">
-
-					<div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating" class="rating-4 job_listing-rating-wrapper" title="4 Reviews">
-			<span class="job_listing-rating-stars">
-				
-		<span class='stars-rating'>
-			
-									<span class="dashicons dashicons-star-filled"></span>
-				
-			
-									<span class="dashicons dashicons-star-filled"></span>
-				
-			
-									<span class="dashicons dashicons-star-filled"></span>
-				
-			
-									<span class="dashicons dashicons-star-filled"></span>
-				
-			
-									<span class="dashicons dashicons-star-filled"></span>
-				
-					</span>			</span>
-
-			<span class="job_listing-rating-average">
-				<span itemprop="ratingValue">4.8</span>
-			</span>
-			<span class="job_listing-rating-count">
-				<span itemprop="reviewCount">4</span> Reviews			</span>
-		</div>
-	<div class="job-manager-form wp-job-manager-bookmarks-form">
-	<div><a class="bookmark-notice" href="my-account/index.html">Login to bookmark this Listing</a></div>
-</div>
-		</footer><!-- .entry-footer -->
-
-	</div>
-</li><!-- #post-## -->
-
-            
-                
-<!-- #post-## -->
-
-                    </ul>
-
-        </aside>
-		</div>
-
-			<!-- <aside id="listify_widget_feature_callout-7" class="home-widget listify_widget_feature_callout">
-			<div class="feature-callout text-left image-pull" style="background-color: #ffffff;">
-
-									<div class="container">
-						<div class="col-xs-12 col-sm-6 ">
-							<div class="callout-feature-content" style="color:#717a8f">
-<h2 class="callout-feature-title" style="color:#717a8f">Get The Exposure You Deserve</h2>
-<p>Your business deserves efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions.</p>
-<p><a href="https://atom.astoundify.com/listify/how-it-works/" class="button">How It Works</a></p>
-</div>
 						</div>
+						<div class="container"></div>
+						<!--<a href="listings/index.html">View All</a>-->
 					</div>
-
-					<div class="col-xs-12 col-sm-6 col-sm-offset-6 feature-callout-image-pull" style="background-image:url('https://atom.astoundify.com/listify/wp-content/uploads/sites/39/2014/11/get-exposure-for-your-biz.jpg'); ?>; background-position: center top"></div>
-				
-			</div>
-
-			</aside> -->
-		<div class="container">
-
-		<!-- <aside id="listify_widget_panel_wcpl_pricing_table-7" class="home-widget listify_widget_panel_wcpl_pricing_table"><div class="home-widget-section-title"><h2 class="home-widget-title">Find a plan that’s right for you.<h2 class="home-widget-description">Every plan comes with a 30-day free trial, Woot!</h2></h2></div>
-		<ul class="job-packages inline">
-
-		
-			
-			<li class="job-package">
-				
-				<div class="job-package-header">
-					<div class="job-package-title">
-						Platinum Package					</div>
-					<div class="job-package-price">
-						<span class="amount">&#36;45</span> <span class="subscription-details"> / month</span>					</div>
+				</div><a class="ion-search search-overlay-toggle" data-toggle=
+				"#search-navigation" href="index.html#search-navigation"></a>
+				<div class="search-overlay" id="search-navigation">
+					<form action="listings/index.html" class="search-form" method="get" role=
+					"search">
+						<label><span class="screen-reader-text">Search for:</span> <input class=
+						"search-field" name="search_keywords" placeholder="Search" title=
+						"Search for:" type="search" value=""></label> <button class=
+						"search-submit" type="submit"></button>
+					</form><a class="ion-close search-overlay-toggle" data-toggle=
+					"#search-navigation" href="index.html#search-navigation"></a>
 				</div>
-
-				<div class="job-package-includes">
-										<ul>
-						<li>Gold Package Features
-</li><li>VIP Service &amp; Support
-</li><li>Dedicated Account Manager</li>
-					</ul>
-				</div>
-
-				<div class="job-package-purchase">
-					<a href="submit-listing/index-selected_package=26.html" class="button">Get Started Now</a>
-				</div>
-			</li>
-
-		
-			
-			<li class="job-package">
-									<span class="job-package-tag"><a href="product-tag/most-popular/index.html" rel="tag">Most Popular</a></span>
-				
-				<div class="job-package-header">
-					<div class="job-package-title">
-						Gold Package					</div>
-					<div class="job-package-price">
-						<span class="amount">&#36;19</span> <span class="subscription-details"> / month</span>					</div>
-				</div>
-
-				<div class="job-package-includes">
-										<ul>
-						<li>See Statistics
-</li><li>Receive Reviews
-</li><li>Featured Listing
-</li><li>Take Bookings Online
-</li><li>Add Up To 20 Listings
-</li><li>Post Deals &amp; Promotions
-</li><li>24/7 Service &amp; Support
-</li><li>Display Map
-</li><li>Post Video &amp; Image Gallery
-</li><li>Display Hours Of Business
-</li><li>Display Business Amenities
-</li><li>Display Website &amp; Phone Number</li>
-					</ul>
-				</div>
-
-				<div class="job-package-purchase">
-					<a href="submit-listing/index-selected_package=27.html" class="button">Get Started Now</a>
-				</div>
-			</li>
-
-		
-			
-			<li class="job-package">
-				
-				<div class="job-package-header">
-					<div class="job-package-title">
-						Bronze Package					</div>
-					<div class="job-package-price">
-						<span class="amount">&#36;8</span> <span class="subscription-details"> / month</span>					</div>
-				</div>
-
-				<div class="job-package-includes">
-										<ul>
-						<li>Accept Reviews
-</li><li>Edit Your Listing
-</li><li>Take Bookings Online
-</li><li>Post Deals &amp; Promotions</li>
-					</ul>
-				</div>
-
-				<div class="job-package-purchase">
-					<a href="submit-listing/index-selected_package=28.html" class="button">Get Started Now</a>
-				</div>
-			</li>
-
-		
-		</ul>
-
-		</aside> -->
-		</div>
-
-			<!-- <aside id="listify_widget_feature_callout-8" class="home-widget listify_widget_feature_callout">
-			<div class="feature-callout text-left image-cover" style="background-color: #ffffff;">
-
-				
-					<div class="feature-callout-cover no-overlay" style="background-image:url('https://atom.astoundify.com/listify/wp-content/uploads/sites/39/2014/10/iphone-home-page.jpg'); ?>; background-position: center center">
-
-						<div class="container">
-							<div class="row">
-								<div class="col-xs-12 col-sm-8 col-md-6 ">
-									<div class="callout-feature-content" style="color:#ffffff">
-<h2 class="callout-feature-title" style="color:#ffffff">Want to learn more?</h2>
-<p><a href="http://atom.astoundify.com/listify/how-it-works/" class="button">How It Works</a></p>
-</div>
+			</nav>
+		</header>
+	</div><!-- #site-navigation -->
+	<!-- #masthead -->
+	<div class="site-content" id="content">
+		<div class="homepage-cover page-cover entry-cover has-image" style=
+		"background-image: url('referu/background.jpg');">
+			<div class="cover-wrapper container">
+				<div class="listify_widget_search_listings">
+					<div class="home-widget-section-title">
+						<h1 class="home-widget-title">Search for student apartments!</h1>
+						<h2 class="home-widget-description">ReferU helps you find verified
+						student apartment listings around your university<br>
+						Let's explore</h2>
+					</div><a class="js-toggle-area-trigger" data-toggle=".job_filters" href=
+					"index.html#">Toggle Filters</a>
+					<form action="listings/index.html" class="job_search_form" method="get">
+						<div class="search_jobs">
+							<div class="search_keywords">
+								<label for="search_keywords">Keywords</label> <input id=
+								"search_keywords" name="search_keywords" placeholder="Keywords" type=
+								"text">
+							</div>
+							<div class="search_location">
+								<label for="search_location">Location</label> <input id=
+								"search_location" name="search_location" placeholder="Location" type=
+								"text">
+							</div>
+							<div class="search-radius-wrapper in-use">
+								<div class="search-radius-label">
+									<label for="use_search_radius"><input checked='checked' id=
+									"use_search_radius" name="use_search_radius" type="checkbox"> Radius:
+									<span class="radi">300</span> mi</label>
 								</div>
-							</div>
+								<div class="search-radius-slider">
+									<div id="search-radius"></div>
+								</div><input id="search_radius" name="search_radius" type="hidden"
+								value="300">
+							</div><input id="search_lat" name="search_lat" type="hidden" value="0">
+							<input id="search_lng" name="search_lng" type="hidden" value="0">
+							<div class="filter_wide filter_by_tag">
+								Filter by tag: <span class="filter_by_tag_cloud"></span>
+							</div><input class="search_region" name="search_region" type="hidden"
+							value="">
 						</div>
-
-					</div>
-
-				
+						<p class="filter-by-type-label">Filter by type:</p><input id=
+						"search_context" name="search_context" type="hidden" value="6">
+						<ul class="job_types"></ul><input name="filter_job_type[]" type="hidden"
+						value=""> <button class="update_results" data-label="Search Listings"
+						data-refresh="Loading..." name="update_results" type="submit">Search
+						Listings</button>
+						<div class="showing_jobs"></div>
+					</form>
+					<div class="archive-job_listing-filter-title">
+						<div class="archive-job_listing-layout-wrapper">
+							<a class="archive-job_listing-layout button active" data-style="grid"
+							href="index.html#"><span class="ion-grid"></span></a> <a class=
+							"archive-job_listing-layout button" data-style="list" href=
+							"index.html#"><span class="ion-navicon-round"></span></a>
+						</div>
+						<h3 class="archive-job_listing-found"><span class=
+						"results-found">0</span> Results Found</h3>
+					</div><noscript>Your browser does not support JavaScript, or it is
+					disabled. JavaScript must be enabled in order to view listings.</noscript>
+				</div>
 			</div>
-
-			</aside> -->
-		<div class="container">
-
-		
+			<!-- <div class="wp-video" style="width: 750px;">
+				<video class="wp-video-shortcode" id="video-6-1" width="750" height="422" loop="1" autoplay="1" preload="auto" controls="controls"><source type="" src="https://player.vimeo.com/external/118518515.hd.mp4?s=e0741e40d2d8b5f1f1d12a2bcb0cedce&#038;_=1" /><source type="video/webm" src="https://f6ca679df901af69ace6-d3d26a34307edc4f7eeb40d85a64c4a7.ssl.cf5.rackcdn.com/listify-loops-new.webm?_=1" /></video>
+			</div> -->
+			<p>ReferU helps you find out whats happening in your city, Let&#8217;s
+			explore.</p>
 		</div>
-
-	
-
-	</div><!-- #content -->
-
-	<div class="footer-wrapper">
-
-		
-			
-			
-<!-- <div class="as-seen-on">
-	<div class="container">
-
-		<h1 class="aso-title">As Seen On</h1>
-
-		<div class="aso-content">
-			<embed src="wp-content/uploads/sites/39/2014/10/WordPress.svg" type="image/svg+xml" /><embed src="wp-content/uploads/sites/39/2014/10/jquery.svg" type="image/svg+xml" />
-<embed src="wp-content/uploads/sites/39/2014/10/envato.svg" type="image/svg+xml" />
-<embed src="wp-content/uploads/sites/39/2014/10/node.svg" type="image/svg+xml" />		</div>
-
-	</div>
-</div> -->
-
-			
-				<footer class="site-footer-widgets">
-					<div class="container">
-						<div class="row">
-
-							<div class="footer-widget-column col-xs-12 col-sm-12 col-lg-5">
-								<aside id="text-2" class="footer-widget widget_text">			
-									<img src="referu/Logo_Transparent.png" type="image/svg+xml" style = "width:100px" ></img>
-<p>
-At ReferU our purpose is to help students find deals on great apartments. Go Explore!
-<p>
-</div>
-		</aside>							</div>
-
-							<div class="footer-widget-column col-xs-12 col-sm-6 col-lg-3 col-lg-offset-1">
-								<aside id="nav_menu-2" class="footer-widget widget_nav_menu"><h4 class="footer-widget-title">About ReferU</h4><div class="menu-need-help-menu-footer-container"><ul id="menu-need-help-menu-footer" class="menu"><li id="menu-item-248" class="ion-help-buoy menu-item menu-item-type-custom menu-item-object-custom menu-item-248"><a href="index.html#">Help Center</a></li>
-<li id="menu-item-249" class="ion-clipboard menu-item menu-item-type-custom menu-item-object-custom menu-item-249"><a href="terms-of-service/index.html">Terms of Use</a></li>
-<li id="menu-item-250" class="ion-help-circled menu-item menu-item-type-custom menu-item-object-custom menu-item-250"><a href="about-listify/index.html">About Listify</a></li>
-<li id="menu-item-251" class="ion-ios-chatbubble menu-item menu-item-type-custom menu-item-object-custom menu-item-251"><a href="blog/index.html">Listify Blog</a></li>
-<li id="menu-item-252" class="ion-person menu-item menu-item-type-custom menu-item-object-custom menu-item-252"><a href="index.html#">Careers</a></li>
-</ul></div></aside>							</div>
-
-							<div class="footer-widget-column col-xs-12 col-sm-6 col-lg-3">
-								<aside id="nav_menu-3" class="footer-widget widget_nav_menu"><h4 class="footer-widget-title">Stay Connected</h4><div class="menu-social-widget-menu-container"><ul id="menu-social-widget-menu" class="menu"><li id="menu-item-325" class="ion-social-twitter menu-item menu-item-type-custom menu-item-object-custom menu-item-325"><a href="http://twitter.com/astoundify">Twitter</a></li>
-<li id="menu-item-326" class="ion-social-facebook menu-item menu-item-type-custom menu-item-object-custom menu-item-326"><a href="http://facebook.com/astoundify">Facebook</a></li>
-<li id="menu-item-327" class="ion-social-googleplus menu-item menu-item-type-custom menu-item-object-custom menu-item-327"><a href="http://google.com">Google+</a></li>
-<li id="menu-item-328" class="ion-social-instagram-outline menu-item menu-item-type-custom menu-item-object-custom menu-item-328"><a href="http://instagram.com">Instagram</a></li>
-<li id="menu-item-329" class="ion-social-vimeo menu-item menu-item-type-custom menu-item-object-custom menu-item-329"><a href="http://vimeo.com/astoundify">Vimeo</a></li>
-</ul></div></aside>							</div>
-
+		<div class="container homepage-hero-style-video">
+			<aside class="home-widget listify_widget_taxonomy_image_grid" id=
+			"listify_widget_taxonomy_image_grid-5">
+				<div class="home-widget-section-title">
+					<h2 class="home-widget-title">Explore around your university</h2>Find
+					listings you like and book em!
+				</div>
+				<div class="row">
+					<section ng-repeat = "eachVariable in allLocations" class="col-xs-12 col-sm-6 col-md-4 image-grid-item" id=
+					"image-grid-term-chandler-arizona">
+						<div class=
+						"col-xs-12 col-sm-6 col-md-6 image-grid-cover entry-cover has-image"
+						style="background-image: url('{{eachVariable.url}}');">
+							<a class="image-grid-clickbox" href=
+							"listing-region/listing/index.html?name={{eachVariable.name}}"></a> <a class=
+							"cover-wrapper" href=
+							"listing-region/listing/index.html?name={{eachVariable.name}}">{{eachVariable.name}}</a>
 						</div>
-					</div>
-				</footer>
-
-			
+					</section>
+				</div>
+			</aside>
+			<aside class="home-widget listify_widget_recent_listings" id=
+			"listify_widget_recent_listings-5">
+				<div class="home-widget-section-title">
+					<h2 class="home-widget-title">Recent Listings</h2>
+				</div>
+				<ul class="job_listings">
+					<li ng-repeat = "eachVariable in frontPageListings" class=
+					"job_listing post-685 type-job_listing status-publish has-post-thumbnail hentry job_listing_region-toronto job_listing_category-barbershop job_listing_tag-accepts-credit-cards job_listing_tag-good-for-kids job_listing_tag-wheelchair-accessible job_listing_tag-wifi claimed col-xs-12 col-sm-6 col-md-4 style-grid"
+					data-address="555 Liberty Village, Toronto, Ontario, Canada" data-color=
+					"#627e82" data-featured="" data-grid-columns="col-xs-12 col-sm-6 col-md-4"
+					data-icon="ion-scissors" data-id="685" data-latitude="43.6380835"
+					data-link=
+					"listing/555-liberty-village-toronto-ontario-canada-astoundify-barbershop/index.html"
+					data-longitude="-79.42553470000001" data-rating="4 Stars" data-term="174"
+					data-thumb=
+					"https://demo.astoundify.com/listify/wp-content/uploads/sites/39/job_listings/2014/11/Stocksy_txp782c31421CE000_Medium_85879-150x150.jpg"
+					data-title="Astoundify Barbershop" id="job_listing-685">
+						<div class="content-box">
+							<a class="job_listing-clickbox" href=
+							"listing/555-liberty-village-toronto-ontario-canada-astoundify-barbershop/index.html">
+							</a>
+							<header class="job_listing-entry-header listing-cover has-image" style=
+							"background-image: url('{{eachVariable.url}}');">
+								<div class="job_listing-entry-header-wrapper cover-wrapper">
+									<div class="job_listing-entry-thumbnail">
+										<div class="list-cover has-image" style=
+										"background-image: url('{{eachVariable.url}}');"></div>
+									</div>
+									<div class="job_listing-entry-meta">
+										<h1 class="job_listing-title" itemprop="name">
+										${{eachVariable.price}}</h1><a class="claimed-ribbon popup-trigger"
+										href="index.html#what-is-claimed"><span class=
+										"ion-checkmark-circled"></span> <span class="tooltip">Verified
+										Listing</span></a>
+										<div class="job_listing-location job_listing-location-formatted">
+											<a class="google_map_link" href=
+											"http://maps.google.com/maps?saddr=Current+Location&daddr=43.6380835,-79.42553470000001"
+											target="_blank"><span itemprop="address" itemscope itemtype=
+											"http://schema.org/PostalAddress">{{eachVariable.description}}<br>
+											<span itemprop="addressLocality">{{eachVariable.address}}</span>
+											<span itemprop="addressRegion">Washington DC</span></span></a>
+										</div>
+										<div class="job_listing-phone">
+											<span itemprop="telephone"><a href=
+											"tel:9055555555">{{eachVariable.phone}}</a></span>
+										</div>
+									</div>
+								</div>
+							</header><!-- .entry-header -->
+							<footer class="job_listing-entry-footer">
+								<div class="rating-4 job_listing-rating-wrapper" itemprop=
+								"aggregateRating" itemscope itemtype=
+								"http://schema.org/AggregateRating" title="4 Reviews">
+									<span class="job_listing-rating-stars"><span class=
+									'stars-rating'><span class="dashicons dashicons-star-filled"></span>
+									<span class="dashicons dashicons-star-filled"></span> <span class=
+									"dashicons dashicons-star-filled"></span> <span class=
+									"dashicons dashicons-star-filled"></span> <span class=
+									"dashicons dashicons-star-filled"></span></span></span> <span class=
+									"job_listing-rating-average"><span itemprop=
+									"ratingValue">4.8</span></span> <span class=
+									"job_listing-rating-count"><span itemprop="reviewCount">4</span>
+									Reviews</span>
+								</div>
+								<div class="job-manager-form wp-job-manager-bookmarks-form">
+									<div>
+										<a class="bookmark-notice" href="my-account/index.html">Login to
+										bookmark this Listing</a>
+									</div>
+								</div>
+							</footer><!-- .entry-footer -->
+						</div>
+					</li><!-- #post-## -->
+					<!-- #post-## -->
+				</ul>
+			</aside>
+		</div>
+	</div><!-- #content -->
+	<div class="footer-wrapper">
 		
-		<footer id="colophon" class="site-footer" role="contentinfo">
+		<footer class="site-footer-widgets">
 			<div class="container">
-
-				<div class="site-info">
-					Copyright ReferU © 2015. All Rights Reserved</div><!-- .site-info -->
-
-				<div class="site-social">
-					<div class="menu-social-container"><ul id="menu-social" class="nav-menu-social"><li id="menu-item-240" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-240"><a href="http://facebook.com/astoundify">facebook</a></li>
-<li id="menu-item-241" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-241"><a href="http://twitter.com/astoundify">twitter</a></li>
-<li id="menu-item-242" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-242"><a href="https://plus.google.com/">google</a></li>
-<li id="menu-item-244" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-244"><a href="http://instagram.com/">instagram</a></li>
-<li id="menu-item-246" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-246"><a href="https://vimeo.com/astoundify">vimeo</a></li>
-<li id="menu-item-8176" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8176"><a href="http://tumblr.com">tumblr</a></li>
-</ul></div>				</div>
-
+				<div class="row">
+					<div class="footer-widget-column col-xs-12 col-sm-12 col-lg-5">
+						<aside class="footer-widget widget_text" id="text-2">
+							<img src="referu/Logo_Transparent.png" style="width:100px">
+							<p>At ReferU our purpose is to help students find deals on great
+							apartments. Go Explore!</p>
+							<p></p>
+						</aside>
+					</div>
+				</div>
+				<div class=
+				"footer-widget-column col-xs-12 col-sm-6 col-lg-3 col-lg-offset-1">
+					<aside class="footer-widget widget_nav_menu" id="nav_menu-2">
+						<h4 class="footer-widget-title">About ReferU</h4>
+						<div class="menu-need-help-menu-footer-container">
+							<ul class="menu" id="menu-need-help-menu-footer">
+								<li class=
+								"ion-help-buoy menu-item menu-item-type-custom menu-item-object-custom menu-item-248"
+								id="menu-item-248">
+									<a href="index.html#">Help Center</a>
+								</li>
+								<li class=
+								"ion-clipboard menu-item menu-item-type-custom menu-item-object-custom menu-item-249"
+								id="menu-item-249">
+									<a href="terms-of-service/index.html">Terms of Use</a>
+								</li>
+								<li class=
+								"ion-help-circled menu-item menu-item-type-custom menu-item-object-custom menu-item-250"
+								id="menu-item-250">
+									<a href="about-listify/index.html">About Listify</a>
+								</li>
+								<li class=
+								"ion-ios-chatbubble menu-item menu-item-type-custom menu-item-object-custom menu-item-251"
+								id="menu-item-251">
+									<a href="blog/index.html">Listify Blog</a>
+								</li>
+								<li class=
+								"ion-person menu-item menu-item-type-custom menu-item-object-custom menu-item-252"
+								id="menu-item-252">
+									<a href="index.html#">Careers</a>
+								</li>
+							</ul>
+						</div>
+					</aside>
+				</div>
+				<div class="footer-widget-column col-xs-12 col-sm-6 col-lg-3">
+					<aside class="footer-widget widget_nav_menu" id="nav_menu-3">
+						<h4 class="footer-widget-title">Stay Connected</h4>
+						<div class="menu-social-widget-menu-container">
+							<ul class="menu" id="menu-social-widget-menu">
+								<li class=
+								"ion-social-twitter menu-item menu-item-type-custom menu-item-object-custom menu-item-325"
+								id="menu-item-325">
+									<a href="http://twitter.com/astoundify">Twitter</a>
+								</li>
+								<li class=
+								"ion-social-facebook menu-item menu-item-type-custom menu-item-object-custom menu-item-326"
+								id="menu-item-326">
+									<a href="http://facebook.com/astoundify">Facebook</a>
+								</li>
+								<li class=
+								"ion-social-googleplus menu-item menu-item-type-custom menu-item-object-custom menu-item-327"
+								id="menu-item-327">
+									<a href="http://google.com">Google+</a>
+								</li>
+								<li class=
+								"ion-social-instagram-outline menu-item menu-item-type-custom menu-item-object-custom menu-item-328"
+								id="menu-item-328">
+									<a href="http://instagram.com">Instagram</a>
+								</li>
+								<li class=
+								"ion-social-vimeo menu-item menu-item-type-custom menu-item-object-custom menu-item-329"
+								id="menu-item-329">
+									<a href="http://vimeo.com/astoundify">Vimeo</a>
+								</li>
+							</ul>
+						</div>
+					</aside>
+				</div>
 			</div>
-		</footer><!-- #colophon -->
-
+		</footer>
 	</div>
+	<footer class="site-footer" id="colophon" role="contentinfo">
+		<div class="container">
+			<div class="site-info">
+				Copyright ReferU © 2015. All Rights Reserved
+			</div><!-- .site-info -->
+			<div class="site-social">
+				<div class="menu-social-container">
+					<ul class="nav-menu-social" id="menu-social">
+						<li class=
+						"menu-item menu-item-type-custom menu-item-object-custom menu-item-240"
+						id="menu-item-240">
+							<a href="http://facebook.com/astoundify">facebook</a>
+						</li>
+						<li class=
+						"menu-item menu-item-type-custom menu-item-object-custom menu-item-241"
+						id="menu-item-241">
+							<a href="http://twitter.com/astoundify">twitter</a>
+						</li>
+						<li class=
+						"menu-item menu-item-type-custom menu-item-object-custom menu-item-242"
+						id="menu-item-242">
+							<a href="https://plus.google.com/">google</a>
+						</li>
+						<li class=
+						"menu-item menu-item-type-custom menu-item-object-custom menu-item-244"
+						id="menu-item-244">
+							<a href="http://instagram.com/">instagram</a>
+						</li>
+						<li class=
+						"menu-item menu-item-type-custom menu-item-object-custom menu-item-246"
+						id="menu-item-246">
+							<a href="https://vimeo.com/astoundify">vimeo</a>
+						</li>
+						<li class=
+						"menu-item menu-item-type-custom menu-item-object-custom menu-item-8176"
+						id="menu-item-8176">
+							<a href="http://tumblr.com">tumblr</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer><!-- #colophon -->
+	<!-- #page -->
+	<div id="ajax-response"></div>
+	<script type='text/javascript'>
+		   document.addEventListener('DOMContentLoaded', function(event) {
+			   if (typeof Receiptful !== 'undefined') {
+				   Receiptful.init({
+					   user: 'cfac5e127d79bf630be06c1f54d591b9',
+					   product: '28',
+					   cart: '',
+					   customer: '',
+					   recommend: 0
+				   });
+			   }
+		   });
+	</script> 
+	<script id="tmpl-pinTemplate" type="text/template">
+		   <div class="map-marker type-{{{ data.term }}} {{{ data.featured }}}"><i class="{{{ data.icon }}}"></i>
+		   </div>
+	</script> 
+	<script id="tmpl-infoBubbleTemplate" type="text/template">
+		   <a href="{{{ data.link }}}">
+			   <# if ( typeof( data.thumb ) !='undefined' ) { #>
+				   <span style="background-image: url({{{ data.thumb }}})" class="list-cover has-image"></span>
+				   <# } #>
 
-</div><!-- #page -->
+					   <# if ( typeof( data.title ) !='undefined' ) { #>
+						   <h1>{{{ data.title }}}</h1>
+						   <# } #>
 
-<div id="ajax-response"></div>
+							   <# if ( typeof( data.rating ) !='undefined' ) { #>
+								   <span class="rating stars-{{{ data.rating }}}">
+			   {{{ data.rating }}} 
+		   </span>
+								   <# } #>
 
-<script type='text/javascript'>
-			document.addEventListener('DOMContentLoaded', function(event) {
-				if ( typeof Receiptful !== 'undefined' ) {
-					Receiptful.init({
-						user: 'cfac5e127d79bf630be06c1f54d591b9',
-						product: '28',
-						cart: '',
-						customer: '',
-						recommend: 0					});
-				}
-			});
-		</script><script id="tmpl-pinTemplate" type="text/template">
-	<div class="map-marker type-{{{ data.term }}} {{{ data.featured }}}"><i class="{{{ data.icon }}}"></i></div>
-</script>
-<script id="tmpl-infoBubbleTemplate" type="text/template">
-	<a href="{{{ data.link }}}">
-		<# if ( typeof( data.thumb ) != 'undefined') { #>
-		<span style="background-image: url({{{ data.thumb }}})" class="list-cover has-image"></span>
-		<# } #>
-
-		<# if ( typeof( data.title ) != 'undefined') { #>
-		<h1>{{{ data.title }}}</h1>
-		<# } #>
-
-		<# if ( typeof( data.rating ) != 'undefined') { #>
-		<span class="rating stars-{{{ data.rating }}}">
-			{{{ data.rating }}}	
-		</span> 
-		<# } #>
-
-		<# if ( typeof( data.address ) != 'undefined') { #>
-		<span class="address">{{{ data.address }}}</span>
-		<# } #>
-	</a>
-</script>
-<script type='text/javascript' src='wp-includes/js/jquery/ui/core.min-ver=1.11.4.js'></script>
-<script type='text/javascript' src='wp-includes/js/jquery/ui/widget.min-ver=1.11.4.js'></script>
-<script type='text/javascript' src='wp-includes/js/jquery/ui/mouse.min-ver=1.11.4.js'></script>
-<script type='text/javascript' src='wp-includes/js/jquery/ui/slider.min-ver=1.11.4.js'></script>
-<script type='text/javascript' src='wp-includes/js/underscore.min-ver=1.6.0.js'></script>
-<script type='text/javascript' src='wp-includes/js/backbone.min-ver=1.1.2.js'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var _wpUtilSettings = {"ajax":{"url":"\/listify\/wp-admin\/admin-ajax.php"}};
-/* ]]> */
-</script>
-<script type='text/javascript' src='wp-includes/js/wp-util.min-ver=4.4.1.js'></script>
-<script type='text/javascript' src='wp-includes/js/wp-backbone.min-ver=4.4.1.js'></script>
-<script type='text/javascript' src='wp-content/plugins/wp-job-manager/assets/js/jquery-deserialize/jquery.deserialize-ver=1.2.1.js'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var job_manager_chosen_multiselect_args = {"search_contains":"1"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='wp-content/plugins/woocommerce/assets/js/chosen/chosen.jquery.min-ver=1.0.0.js'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var job_manager_ajax_filters = {"ajax_url":"\/listify\/jm-ajax\/%%endpoint%%\/","is_rtl":"0","lang":"","i18n_load_prev_listings":"Load previous listings"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='wp-content/plugins/wp-job-manager/assets/js/ajax-filters.min-ver=1.23.13.js'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var wpjmel = {"start_point":"Toronto, ON, Canada","start_geo_lat":"43.653226","start_geo_long":"-79.38318429999998","enable_map":"1","map_elements":"#job_location, #setting-wpjmel_map_start_location","user_location":[],"file_path":"https:\/\/demo.astoundify.com\/listify\/wp-content\/plugins\/wp-job-manager-extended-location\/.\/assets","l10n":{"locked":"Lock Pin Location","unlocked":"Unlock Pin Location"},"list_geo_lat":"","list_geo_long":""};
-/* ]]> */
-</script>
-<script type='text/javascript' src='wp-content/plugins/wp-job-manager-extended-location/assets/js/wp-job-manager-extended-location-ver=2.1.0.js'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var listifySettings = {"ajaxurl":"https:\/\/demo.astoundify.com\/listify\/wp-admin\/admin-ajax.php","homeurl":"https:\/\/demo.astoundify.com\/listify\/","archiveurl":"https:\/\/demo.astoundify.com\/listify\/listings\/","is_job_manager_archive":"","megamenu":{"taxonomy":"job_listing_category"},"l10n":{"closed":"Closed","timeFormat":"g:i a"}};
-var listifyListingGallery = {"canUpload":"","gallery_title":"Add Images to Gallery","gallery_button":"Add to gallery","delete_image":"Delete image","default_title":"Upload","default_button":"Select this"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='wp-content/themes/listify/js/app.min-ver=20141204.js'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var listifyMapSettings = {"displayMap":"1","facetwp":"","useClusters":"1","autoFit":"1","trigger":"click","mapOptions":{"zoom":"10","maxZoom":17,"maxZoomOut":3,"gridSize":"40","scrollwheel":true,"center":["43.761539","-79.411079"],"styles":[{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"administrative.land_parcel","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"simplified"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"hue":"#f49935"}]},{"featureType":"road.highway","elementType":"labels","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"hue":"#fad959"}]},{"featureType":"road.arterial","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"road.local","elementType":"labels","stylers":[{"visibility":"simplified"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"hue":"#a1cdfc"},{"saturation":30},{"lightness":49}]}]},"searchRadius":{"min":"100","max":"1000","default":"300"},"autoComplete":{"componentRestrictions":{"country":"us"}}};
-/* ]]> */
-</script>
-<script type='text/javascript' src='wp-content/themes/listify/inc/integrations/wp-job-manager/js/map/app.min-ver=20150213.js'></script>
-<script type='text/javascript' src='wp-content/plugins/contact-form-7/includes/js/jquery.form.min-ver=3.51.0-2014.06.20.js'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var _wpcf7 = {"loaderUrl":"https:\/\/demo.astoundify.com\/listify\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","recaptchaEmpty":"Please verify that you are not a robot.","sending":"Sending ...","cached":"1"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='wp-content/plugins/contact-form-7/includes/js/scripts-ver=4.3.1.js'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var wc_add_to_cart_params = {"ajax_url":"\/listify\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/listify\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View Cart","cart_url":"https:\/\/demo.astoundify.com\/listify\/cart\/","is_cart":"","cart_redirect_after_add":"yes"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min-ver=2.5.0.js'></script>
-<script type='text/javascript' src='wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min-ver=2.70.js'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var woocommerce_params = {"ajax_url":"\/listify\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/listify\/?wc-ajax=%%endpoint%%"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min-ver=2.5.0.js'></script>
-<script type='text/javascript' src='wp-content/plugins/woocommerce/assets/js/jquery-cookie/jquery.cookie.min-ver=1.4.1.js'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var wc_cart_fragments_params = {"ajax_url":"\/listify\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/listify\/?wc-ajax=%%endpoint%%","fragment_name":"wc_fragments"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min-ver=2.5.0.js'></script>
-<script type='text/javascript' src='wp-content/themes/listify/js/vendor/salvattore.min-ver=4.4.1.js'></script>
-<script type='text/javascript' src='https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201603'></script>
-<script type='text/javascript' src='wp-content/themes/listify/inc/integrations/wp-job-manager-bookmarks/js/wp-job-manager-bookmarks.min-ver=1.2.1.js'></script>
-<script type='text/javascript' src='wp-includes/js/wp-embed.min-ver=4.4.1.js'></script>
-<script type='text/javascript' src='wp-content/plugins/wp-job-manager-tags/assets/js/tag-filter-ver=1.0.js'></script>
-
+									   <# if ( typeof( data.address ) !='undefined' ) { #>
+										   <span class="address">{{{ data.address }}}</span>
+										   <# } #>
+		   </a>
+	</script> 
+	<script src='wp-includes/js/jquery/ui/core.min-ver=1.11.4.js' type=
+	'text/javascript'>
+	</script> 
+	<script src='wp-includes/js/jquery/ui/widget.min-ver=1.11.4.js' type=
+	'text/javascript'>
+	</script> 
+	<script src='wp-includes/js/jquery/ui/mouse.min-ver=1.11.4.js' type=
+	'text/javascript'>
+	</script> 
+	<script src='wp-includes/js/jquery/ui/slider.min-ver=1.11.4.js' type=
+	'text/javascript'>
+	</script> 
+	<script src='wp-includes/js/underscore.min-ver=1.6.0.js' type=
+	'text/javascript'>
+	</script> 
+	<script src='wp-includes/js/backbone.min-ver=1.1.2.js' type='text/javascript'>
+	</script> 
+	<script type='text/javascript'>
+		   /* <![CDATA[ */
+		   var _wpUtilSettings = {
+			   "ajax": {
+				   "url": "\/listify\/wp-admin\/admin-ajax.php"
+			   }
+		   };
+		   /* ]]> */
+	</script> 
+	<script src='wp-includes/js/wp-util.min-ver=4.4.1.js' type='text/javascript'>
+	</script> 
+	<script src='wp-includes/js/wp-backbone.min-ver=4.4.1.js' type=
+	'text/javascript'>
+	</script> 
+	<script src=
+	'wp-content/plugins/wp-job-manager/assets/js/jquery-deserialize/jquery.deserialize-ver=1.2.1.js'
+	type='text/javascript'>
+	</script> 
+	<script type='text/javascript'>
+		   /* <![CDATA[ */
+		   var job_manager_chosen_multiselect_args = {
+			   "search_contains": "1"
+		   };
+		   /* ]]> */
+	</script> 
+	<script src=
+	'wp-content/plugins/woocommerce/assets/js/chosen/chosen.jquery.min-ver=1.0.0.js'
+	type='text/javascript'>
+	</script> 
+	<script type='text/javascript'>
+		   /* <![CDATA[ */
+		   var job_manager_ajax_filters = {
+			   "ajax_url": "\/listify\/jm-ajax\/%%endpoint%%\/",
+			   "is_rtl": "0",
+			   "lang": "",
+			   "i18n_load_prev_listings": "Load previous listings"
+		   };
+		   /* ]]> */
+	</script> 
+	<script src=
+	'wp-content/plugins/wp-job-manager/assets/js/ajax-filters.min-ver=1.23.13.js'
+	type='text/javascript'>
+	</script> 
+	<script type='text/javascript'>
+		   /* <![CDATA[ */
+		   var wpjmel = {
+			   "start_point": "Toronto, ON, Canada",
+			   "start_geo_lat": "43.653226",
+			   "start_geo_long": "-79.38318429999998",
+			   "enable_map": "1",
+			   "map_elements": "#job_location, #setting-wpjmel_map_start_location",
+			   "user_location": [],
+			   "file_path": "https:\/\/demo.astoundify.com\/listify\/wp-content\/plugins\/wp-job-manager-extended-location\/.\/assets",
+			   "l10n": {
+				   "locked": "Lock Pin Location",
+				   "unlocked": "Unlock Pin Location"
+			   },
+			   "list_geo_lat": "",
+			   "list_geo_long": ""
+		   };
+		   /* ]]> */
+	</script> 
+	<script src=
+	'wp-content/plugins/wp-job-manager-extended-location/assets/js/wp-job-manager-extended-location-ver=2.1.0.js'
+	type='text/javascript'>
+	</script> 
+	<script type='text/javascript'>
+		   /* <![CDATA[ */
+		   var listifySettings = {
+			   "ajaxurl": "https:\/\/demo.astoundify.com\/listify\/wp-admin\/admin-ajax.php",
+			   "homeurl": "https:\/\/demo.astoundify.com\/listify\/",
+			   "archiveurl": "https:\/\/demo.astoundify.com\/listify\/listings\/",
+			   "is_job_manager_archive": "",
+			   "megamenu": {
+				   "taxonomy": "job_listing_category"
+			   },
+			   "l10n": {
+				   "closed": "Closed",
+				   "timeFormat": "g:i a"
+			   }
+		   };
+		   var listifyListingGallery = {
+			   "canUpload": "",
+			   "gallery_title": "Add Images to Gallery",
+			   "gallery_button": "Add to gallery",
+			   "delete_image": "Delete image",
+			   "default_title": "Upload",
+			   "default_button": "Select this"
+		   };
+		   /* ]]> */
+	</script> 
+	<script src='wp-content/themes/listify/js/app.min-ver=20141204.js' type=
+	'text/javascript'>
+	</script> 
+	<script type='text/javascript'>
+		   /* <![CDATA[ */
+		   var listifyMapSettings = {
+			   "displayMap": "1",
+			   "facetwp": "",
+			   "useClusters": "1",
+			   "autoFit": "1",
+			   "trigger": "click",
+			   "mapOptions": {
+				   "zoom": "10",
+				   "maxZoom": 17,
+				   "maxZoomOut": 3,
+				   "gridSize": "40",
+				   "scrollwheel": true,
+				   "center": ["43.761539", "-79.411079"],
+				   "styles": [{
+					   "featureType": "poi",
+					   "stylers": [{
+						   "visibility": "off"
+					   }]
+				   }, {
+					   "featureType": "administrative.land_parcel",
+					   "elementType": "all",
+					   "stylers": [{
+						   "visibility": "off"
+					   }]
+				   }, {
+					   "featureType": "landscape.man_made",
+					   "elementType": "all",
+					   "stylers": [{
+						   "visibility": "off"
+					   }]
+				   }, {
+					   "featureType": "poi",
+					   "elementType": "labels",
+					   "stylers": [{
+						   "visibility": "off"
+					   }]
+				   }, {
+					   "featureType": "road",
+					   "elementType": "labels",
+					   "stylers": [{
+						   "visibility": "simplified"
+					   }, {
+						   "lightness": 20
+					   }]
+				   }, {
+					   "featureType": "road.highway",
+					   "elementType": "geometry",
+					   "stylers": [{
+						   "hue": "#f49935"
+					   }]
+				   }, {
+					   "featureType": "road.highway",
+					   "elementType": "labels",
+					   "stylers": [{
+						   "visibility": "simplified"
+					   }]
+				   }, {
+					   "featureType": "road.arterial",
+					   "elementType": "geometry",
+					   "stylers": [{
+						   "hue": "#fad959"
+					   }]
+				   }, {
+					   "featureType": "road.arterial",
+					   "elementType": "labels",
+					   "stylers": [{
+						   "visibility": "off"
+					   }]
+				   }, {
+					   "featureType": "road.local",
+					   "elementType": "geometry",
+					   "stylers": [{
+						   "visibility": "simplified"
+					   }]
+				   }, {
+					   "featureType": "road.local",
+					   "elementType": "labels",
+					   "stylers": [{
+						   "visibility": "simplified"
+					   }]
+				   }, {
+					   "featureType": "transit",
+					   "elementType": "all",
+					   "stylers": [{
+						   "visibility": "off"
+					   }]
+				   }, {
+					   "featureType": "water",
+					   "elementType": "all",
+					   "stylers": [{
+						   "hue": "#a1cdfc"
+					   }, {
+						   "saturation": 30
+					   }, {
+						   "lightness": 49
+					   }]
+				   }]
+			   },
+			   "searchRadius": {
+				   "min": "100",
+				   "max": "1000",
+				   "default": "300"
+			   },
+			   "autoComplete": {
+				   "componentRestrictions": {
+					   "country": "us"
+				   }
+			   }
+		   };
+		   /* ]]> */
+	</script> 
+	<script src=
+	'wp-content/themes/listify/inc/integrations/wp-job-manager/js/map/app.min-ver=20150213.js'
+	type='text/javascript'>
+	</script> 
+	<script src=
+	'wp-content/plugins/contact-form-7/includes/js/jquery.form.min-ver=3.51.0-2014.06.20.js'
+	type='text/javascript'>
+	</script> 
+	<script type='text/javascript'>
+		   /* <![CDATA[ */
+		   var _wpcf7 = {
+			   "loaderUrl": "https:\/\/demo.astoundify.com\/listify\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif",
+			   "recaptchaEmpty": "Please verify that you are not a robot.",
+			   "sending": "Sending ...",
+			   "cached": "1"
+		   };
+		   /* ]]> */
+	</script> 
+	<script src=
+	'wp-content/plugins/contact-form-7/includes/js/scripts-ver=4.3.1.js' type=
+	'text/javascript'>
+	</script> 
+	<script type='text/javascript'>
+		   /* <![CDATA[ */
+		   var wc_add_to_cart_params = {
+			   "ajax_url": "\/listify\/wp-admin\/admin-ajax.php",
+			   "wc_ajax_url": "\/listify\/?wc-ajax=%%endpoint%%",
+			   "i18n_view_cart": "View Cart",
+			   "cart_url": "https:\/\/demo.astoundify.com\/listify\/cart\/",
+			   "is_cart": "",
+			   "cart_redirect_after_add": "yes"
+		   };
+		   /* ]]> */
+	</script> 
+	<script src=
+	'wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min-ver=2.5.0.js'
+	type='text/javascript'>
+	</script> 
+	<script src=
+	'wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min-ver=2.70.js'
+	type='text/javascript'>
+	</script> 
+	<script type='text/javascript'>
+		   /* <![CDATA[ */
+		   var woocommerce_params = {
+			   "ajax_url": "\/listify\/wp-admin\/admin-ajax.php",
+			   "wc_ajax_url": "\/listify\/?wc-ajax=%%endpoint%%"
+		   };
+		   /* ]]> */
+	</script> 
+	<script src=
+	'wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min-ver=2.5.0.js'
+	type='text/javascript'>
+	</script> 
+	<script src=
+	'wp-content/plugins/woocommerce/assets/js/jquery-cookie/jquery.cookie.min-ver=1.4.1.js'
+	type='text/javascript'>
+	</script> 
+	
+	<!--
+	<script src=
+	'wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min-ver=2.5.0.js'
+	type='text/javascript'>
+	</script> 
+	<script src='wp-content/themes/listify/js/vendor/salvattore.min-ver=4.4.1.js'
+	type='text/javascript'>
+	</script> 
+	<script src='https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201603'
+	type='text/javascript'>
+	</script> 
+	<script src=
+	'wp-content/themes/listify/inc/integrations/wp-job-manager-bookmarks/js/wp-job-manager-bookmarks.min-ver=1.2.1.js'
+	type='text/javascript'>
+	</script> 
+	<script src='wp-includes/js/wp-embed.min-ver=4.4.1.js' type='text/javascript'>
+	</script> 
+	<script src=
+	'wp-content/plugins/wp-job-manager-tags/assets/js/tag-filter-ver=1.0.js' type=
+	'text/javascript'>
+	</script> -->
 </body>
 </html>

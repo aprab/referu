@@ -6,6 +6,7 @@ import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
 import com.google.appengine.api.datastore.GeoPt;
+import com.google.appengine.api.search.GeoPoint;
 
 
 @PersistenceCapable
@@ -25,6 +26,9 @@ public class ListingsData {
 	private Double _longitude;
 	
 	@Persistent  
+	private GeoPoint geopoint;
+	
+	@Persistent  
 	private String _nameOfListing;
 	
 	@Persistent  
@@ -39,22 +43,17 @@ public class ListingsData {
 	@Persistent
 	private String _url;
 	
-		
-	
-
-	public ListingsData(GeoPt geoPT, String email,
+	public ListingsData(GeoPoint geoPT, String email,
 			String nameOfListing, String description, String phone, String url,
 			Double price) {
 
-		
 		_email = email;
 		
 		_nameOfListing = nameOfListing;
 		_description = description;	
 		_phone = phone;
 		_price = price;
-		_url = url;
-		
+		_url = url;		
 	}
 	
 	public String getEmail() {
@@ -69,8 +68,8 @@ public class ListingsData {
 		return _description;
 	}
 	
-	public GeoPt getPoint() {
-		return _geoPT;
+	public GeoPoint getPoint() {
+		return geopoint;
 	}
 	
 	public String getPhone(){

@@ -65,6 +65,16 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<url-pattern>/core/SignIn</url-pattern>
 	</servlet-mapping>
 	
+    <servlet>
+     <servlet-name>CaptchaServlet</servlet-name>
+     <servlet-class>com.jsos.image.CaptchaServlet</servlet-class>
+    </servlet> 
+    
+	<servlet-mapping>
+	  <servlet-name>CaptchaServlet</servlet-name>
+	  <url-pattern>/servlet/captcha</url-pattern>
+	</servlet-mapping> 
+		
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>

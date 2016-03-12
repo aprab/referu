@@ -17,6 +17,12 @@ public class Signup extends ReferUHTTPServlet {
 	public void goGet(HttpServletRequest req, HttpServletResponse resp)
 		throws IOException, Exception {
 		
+		String captcha = (String)session.getAttribute("captcha");
+		String typed = request.getParameter("human");
+
+		if (!captcha.equals(typed))
+		{
+		
 		String password = req.getParameter("password");
 		String email = req.getParameter("email");
 		String firstName = req.getParameter("firstName");
@@ -53,7 +59,7 @@ public class Signup extends ReferUHTTPServlet {
 		addJsonOutput("valid", false);
 		addJsonOutput("reason", "This email address is already registered.");
 		printIterativeJsonOutput();
-		
+		}
 	}
 	
 	public boolean isJson(){
